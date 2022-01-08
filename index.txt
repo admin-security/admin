@@ -35,6 +35,7 @@ z-index: 1;
 }
 #in9q {
 padding:0px;
+display:flex;
 flex-direction:column;
 justify-content:center;
 text-align:center;
@@ -522,9 +523,9 @@ visibility: hidden;
 <a href="https://www.instagram.com/ohct.id/" style="color: #fff;">Instagram</a></span>
 </div>
 </div>
-<div class="combet blink">
-<span>HACKED BY MR.COMBET<br></span></div>
-<img src="https://l.top4top.io/p_2197y829x1.png" width="230" height="230"><br>
+<div class="combet">
+<span class="blink">HACKED BY MR.COMBET<br></span>
+<img src="https://l.top4top.io/p_2197y829x1.png" width="230" height="230"><br></div>
 <div class="ohct">
 <span>SORRY, IF I HAVE HACKED YOUR WEBSITE.<br>BECAUSE YOUR WEBSITE SECURITY IS NOT SECURE.<br>PLEASE REPAIR YOUR WEBSITE ASAP.<br>I'M JUST TESTING THE SECURITY YOUR WEBSITE.<br>ONCE AGAIN, I'M SORRY. THANKS YOU !!<br><br></span></div>
 <div class="type-wrap">
