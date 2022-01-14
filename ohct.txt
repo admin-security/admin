@@ -1,5 +1,3 @@
-<?php
-$output = <<<OUTPUT
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,10 +9,10 @@ $output = <<<OUTPUT
     <title>Hacked By One Hat Cyber Team</title>
     <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
-    <!-- Template style -->
+    <link rel="stylesheet" href="https://dl.dropbox.com/s/3bfx3xoa270ohqp/dots.css" type="text/css">
     <link rel="stylesheet" href="https://dl.dropbox.com/s/1vsjgwq4ofxa4n8/style.css" type="text/css">
-    <link rel="stylesheet" href="https://dl.dropbox.com/s/8bj9fxv7he22isf/blue.css" type="text/css">                         
+    <link rel="stylesheet" href="https://dl.dropbox.com/s/8bj9fxv7he22isf/blue.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
    <style>
 body {
 margin: 0;
@@ -22,7 +20,7 @@ background-color: #121212;
 }
 section {
 position: relative;
- width: 100%;
+width: 100%;
 height: 100vh;
 background: #f5f5f5;
 }
@@ -35,12 +33,13 @@ left: 0;
 z-index: 1;
 }
 #in9q {
-  padding:0px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  text-align:center;
-  min-height:100vh;
+padding:0px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+text-align:center;
+max-width: 100%;
+min-height:100vh;
 }
 </style>
 <style type="text/css">
@@ -52,7 +51,7 @@ z-index: 1;
   position: fixed;
   opacity: 1;
   text-align: left;
-  top: 160px;
+  top: 50%;
   z-index: 94034;
 }
 #st-2.st-left {
@@ -200,7 +199,7 @@ box-sizing: border-box;
   border-top-right-radius: 4px;
 }
 #st-2.st-has-labels .st-btn:hover {
-  width: 120px;
+  width: 150px;
 }
 #st-2:not(.st-has-labels) .st-btn:hover {
   width: 62px;
@@ -271,7 +270,8 @@ border-radius: 0 !important;
 #st-2 .st-toggle {
   display: none;
 }body { padding-bottom: 48px; }
-}#st-2 .st-btn[data-network='facebook'] {
+}
+#st-2 .st-btn[data-network='facebook'] {
   background-color: #4267B2
 }
 #st-2 .st-btn[data-network='facebook'] img {
@@ -280,31 +280,35 @@ border-radius: 0 !important;
 #st-2 .st-btn[data-network='facebook'] > span {
   color: #fff
 }
-#st-2 .st-btn[data-network='twitter'] {
-  background-color: #55acee
+#st-2 .st-btn[data-network='whatsapp'] {
+  background-color: #25D366
 }
-#st-2 .st-btn[data-network='twitter'] img {
+#st-2 .st-btn[data-network='whatsapp'] img {
   filter: 
 }
-#st-2 .st-btn[data-network='twitter'] > span {
+#st-2 .st-btn[data-network='whatsapp'] > span {
   color: #fff
 }
-#st-2 .st-btn[data-network='pinterest'] {
+#st-2 .st-btn[data-network='gmail'] {
   background-color: #CB2027
 }
-#st-2 .st-btn[data-network='pinterest'] img {
+#st-2 .st-btn[data-network='gmail'] img {
   filter: 
 }
-#st-2 .st-btn[data-network='pinterest'] > span {
+#st-2 .st-btn[data-network='gmail'] > span {
   color: #fff
 }
-#st-2 .st-btn[data-network='email'] {
-  background-color: #7d7d7d
-}
-#st-2 .st-btn[data-network='email'] img {
+#st-2 .st-btn[data-network='instagram'] {
+  background: #f09433; 
+background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  }
+#st-2 .st-btn[data-network='instagram'] img {
   filter: 
 }
-#st-2 .st-btn[data-network='email'] > span {
+#st-2 .st-btn[data-network='instagram'] > span {
   color: #fff
 }
 #st-2 .st-btn[data-network='sms'] {
@@ -366,12 +370,13 @@ border-radius: 0 !important;
 }
 .maan-top-bar .maan-current-date .maan-current-week,
 .maan-top-bar .maan-current-date .maan-current-day {
-font-family: 'Orbitron', sans-serif;
+font-family: 'Merriweather', sans-serif;
 color: #ffffff;
-font-size: 16px;
+font-size: 18px;
 margin-left: 0px;
 padding-top: 0px;
 padding-bottom: 0px;
+font-weight: bold;
 }
 .maan-top-bar .maan-social-link {
   text-align: right;
@@ -401,67 +406,134 @@ align-items: center;
 justify-content: space-between;
 }
 #txt {
-font-family: 'Orbitron', sans-serif;
+font-family: 'Merriweather', sans-serif;
 color: #ffffff;
-font-size: 16px;
+font-weight: bold;
+font-size: 18px;
 margin-right: 20px;
 padding-top: 0px;
 padding-bottom: 0px;
 }
 </style>
+<style>
+.type-wrap {
+font-family: 'Merriweather';
+font-size: 25px;
+margin: 0;
+font-weight: 300px;
+text-align: center;
+margin-top: 0px;
+line-height: 45px;
+}
+.stroke {
+-webkit-text-stroke-width: 0.1px;
+-webkit-text-stroke-color: #d9d9d9;
+-webkit-text-fill-color: #d9d9d9;
+text-shadow: 0px 0px 5px black;
+font-weight: bold;
+text-align: center;
+}
+.combet {
+ font-size: 33px;
+ font-family: 'Merriweather';
+ margin-top: 0px;
+ font-weight: bold;
+}
+.ohct {
+font-size: 25px;
+font-family: 'Merriweather';
+font-weight: bold;
+}
+.ohct1 {
+font-size: 27px;
+font-family: 'Merriweather';
+font-weight: bold;
+-webkit-text-stroke-width: 0.1px;
+-webkit-text-stroke-color: red;
+-webkit-text-fill-color: red;
+text-shadow: 0px 0px 2px white;
+}
+.ohct2 {
+font-size: 25px;
+font-family: 'Merriweather';
+font-weight: bold;
+-webkit-text-stroke-width: 0.1px;
+-webkit-text-stroke-color: #d9d9d9;
+-webkit-text-fill-color: #d9d9d9;
+text-shadow: 0px 0px 5px #000000;
+}
+</style>
+<style>
+.blink {
+animation: blink-animation 1s steps(5, start) infinite;
+-webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+to {
+visibility: hidden;
+}
+}
+@-webkit-keyframes blink-animation {
+to {
+visibility: hidden;
+}
+</style>
 </head>
-<body onload="startTime()">
-<section style="background-image: url(&quot;https://img.wattpad.com/89baaeec1332e0ff2b69e4209ae9a6b72cb3616d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f366d5355736a7a734d74787265413d3d2d3938323430383637302e313635653465303766396663303535633233353431383430343037352e676966&quot;); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-position: center center;">
-<canvas id="pretty-bg">
-</canvas>
-<div id="st-2" class=" st-sticky-share-buttons st-left st-toggleable st-has-labels ">
-<div class="st-btn st-first" data-network="facebook" style="display: inline-block;">
-  <img alt="facebook sharing button" src="https://platform-cdn.sharethis.com/img/facebook.svg">
-  <span class="st-label">Share</span>
-</div><div class="st-btn" data-network="twitter" style="display: inline-block;">
-  <img alt="twitter sharing button" src="https://platform-cdn.sharethis.com/img/twitter.svg">
-  <span class="st-label">Tweet</span>
-</div><div class="st-btn" data-network="pinterest" style="display: inline-block;">
-  <img alt="pinterest sharing button" src="https://platform-cdn.sharethis.com/img/pinterest.svg">
-  <span class="st-label">Pin</span>
-</div><div class="st-btn" data-network="email" style="display: inline-block;">
-  <img alt="email sharing button" src="https://platform-cdn.sharethis.com/img/email.svg">
-  <span class="st-label">Email</span>
-</div><div class="st-btn" data-network="sms" style="display: inline-block;">
-  <img alt="sms sharing button" src="https://platform-cdn.sharethis.com/img/sms.svg">
-  <span class="st-label">Share</span>
-</div><div class="st-btn st-last" data-network="sharethis" style="display: inline-block;">
-  <img alt="sharethis sharing button" src="https://platform-cdn.sharethis.com/img/sharethis.svg">
-  <span class="st-label">Share</span>
-</div><div class="st-toggle">
-  <div class="st-left">
-    <img alt="arrow_left sharing button" src="https://platform-cdn.sharethis.com/img/arrow_left.svg">
-  </div>
-  <div class="st-right">
-    <img alt="arrow_right sharing button" src="https://platform-cdn.sharethis.com/img/arrow_right.svg">
-  </div>
-</div></div>
-<div id="in9q">
+<body oncontextmenu="return false;" onload="startTime()">
+<section style="background-image: url(&quot;https://f.top4top.io/p_2201jek3p1.jpg&quot;); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-position: center center;">
+<canvas id="pretty-bg"></canvas>
+<div class="bg-animation">
+<div id='stars'></div>
+<div id='stars2'></div>
+<div id='stars3'></div>
+<div id='stars4'></div>
+</div>
+<div id="in9q" class="stroke">
 <div class="maan-top-bar">
 <div class="date-time">
 <div class="maan-current-date">
 <span class="maan-current-week" id="maan-current-week-day"></span><font color="white"> : </font><span class="maan-current-day" id="maan-current-date"></span></div>
 <div id="txt"></div>
 </div></div>
-<font face="RocknRoll One" color="white" size="6"><b>HACKED BY ONE HAT CYBER TEAM</b><br>
-<img src="https://i.top4top.io/p_2186j3k9d1.png" width="200" height="200"><br>
-<font face="RocknRoll One" color="white" size="5">
-    <b>SORRY, IF WE'VE HACKED YOUR WEBSITE. 
-    <br>BECAUSE, YOU WEBSITES NOT SECURE. 
-    <br>PLEASE IMPROVE YOUR WEBSITE. 
-    <br>SORRY ADMIN, WE ARE NOT CRIMINALS. 
-    <br>WE JUST TESTING THE SECURITY YOUR WEBSITE. 
-    <br>THANKS YOU !! <br></font></span>
-    <div class="type-wrap">
+<div id="st-2" class=" st-sticky-share-buttons st-left st-toggleable st-has-labels ">
+
+<div class="st-btn st-first" data-network="facebook" style="display: inline-block;">
+  <img alt="facebook sharing button" src="https://platform-cdn.sharethis.com/img/facebook.svg">
+  <span class="st-label">
+<a href="https://www.facebook.com/OHCT-Hacktivist-105637844802806" style="color: #fff;">Fanpage</a></span>
+</div>
+
+<div class="st-btn" data-network="whatsapp" style="display: inline-block;">
+  <img alt="whatsapp sharing button" src="https://platform-cdn.sharethis.com/img/whatsapp.svg">
+  <span class="st-label">
+<a href="#" style="color: #fff;">WhatsApp</a></span>
+</div>
+
+<div class="st-btn" data-network="gmail" style="display: inline-block;">
+  <img alt="gmail sharing button" src="https://platform-cdn.sharethis.com/img/gmail.svg">
+  <span class="st-label">
+<a href="#" style="color: #fff;">Email</a></span>
+</div>
+
+<div class="st-btn" data-network="instagram" style="display: inline-block;">
+  <img alt="email sharing button" src="https://platform-cdn.sharethis.com/img/instagram.svg">
+  <span class="st-label">
+<a href="https://www.instagram.com/ohct.id/" style="color: #fff;">Instagram</a></span>
+</div>
+</div>
+<div class="combet">
+<span class="blink">HACKED ONE HAT CYBER TEAM<br></span>
+<img src="https://k.top4top.io/p_2205wv5pm1.png" width="230" height="230"><br></div>
+<div class="ohct">
+<span>SORRY, IF I HAVE HACKED YOUR WEBSITE.<br>BECAUSE YOUR WEBSITE SECURITY IS NOT SECURE.<br>PLEASE REPAIR YOUR WEBSITE ASAP.<br>I'M JUST TESTING THE SECURITY YOUR WEBSITE.<br>ONCE AGAIN, I'M SORRY. THANKS YOU !!<br><br></span></div>
+<div class="type-wrap">
 <div class="cd-headline clip">
-<span class="blc">
-    <font face="RocknRoll One">We are</span>
-<span class="cd-words-wrapper">
+<span class="ohct2">[</span>
+<span class="ohct1"> ONE HAT CYBER TEAM </span>
+<span class="ohct2">]</span><br>
+<span class="cd-words-wrapper" style="color: white; margin-top: -20px;">
+<b>Mr.Casper
+</b>
 <b>Mr.Combet
 </b>
 <b>Tu4n Private 404
@@ -476,16 +548,12 @@ padding-bottom: 0px;
 </b>
 <b>IbalGanz
 </b>
-<b>Mr.Casper
-</b>
 </span>
-</div>
-</div>
-</div>
 <audio autoplay="autoplay" controls="controls" src="https://dl.dropbox.com/s/mn0vnejeciy99u4/Sia%20-%20Unstoppable%20%28Official%20Music%20Video%29.mp3?dl=0" type="audio/mpeg" hidden="hidden"></audio>
 </div>
-
-</div></div>
+</div>
+</div>
+</div>
 </section>
 <script src="https://dl.dropbox.com/s/43cgqnmwypfmnki/jquery.min.js"></script>
 <script src="https://dl.dropbox.com/s/cv221c98gj2jn2s/bootstrap.min.js"></script>
@@ -1459,7 +1527,57 @@ if (canvas) {
     }
     currentTime(); /* calling currentTime() function to initiate the process */
 </script>
+<script>
+	jQuery(document).ready(function($){
+	 $('.tlt').textillate({
+  selector: '.texts',
+  loop: true,
+  minDisplayTime: 2500,
+  autoStart: true,
+  outEffects: [ 'bounceOut' ],
+
+  // in animation settings
+  in: {
+    // set the effect name
+    effect: 'fadeIn',
+    delayScale: 1.5,
+    delay: 50,
+    sync: false,
+    shuffle: true
+  },
+
+  // out animation settings.
+  out: {
+    effect: 'bounceOut',
+    delayScale: 1.5,
+    delay: 150,
+    sync: false,
+    shuffle: true,
+  }
+});
+	});
+	</script>
+<script>
+document.onkeydown = function(e) {
+  if(event.keyCode == 123) {
+     return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+     return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+     return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+     return false;
+  }
+  if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+     return false;
+  }
+    if(e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)) {
+     return false;
+  }
+}
+</script>
 </body>
 </html>
-OUTPUT;
-echo $output;
