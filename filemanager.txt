@@ -1,399 +1,299 @@
-#if PHP
+<?php
 
-/**
-* FlxZipArchive, Extends ZipArchiv.
-* Add Dirs with Files and Subdirs.
-*
-* <code>
-*  $archive = new FlxZipArchive;
-*  // .....
-*  $archive->addDir( 'test/blub', 'blub' );
-* </code>
+// Laravel - A PHP Framework For Web Artisans.
+define('LARAVEL_START', microtime(true));
+
+if (file_exists('../storage/devmode') || file_exists('../rvsitebuildercms/storage/devmode')) {
+    ini_set('error_reports', 'E_ALL');
+    ini_set('display_errors', 'On');
+}
+
+register_shutdown_function(function () {
+    //require APP_DEBUG=false
+    $error = error_get_last();
+    if ($error !== null) {
+        if (file_exists(__DIR__ . '/troubleshooting.php')) {
+            include_once __DIR__ . '/troubleshooting.php';
+            show_solution_msg();
+        }
+    }
+});
+
+/*
+|--------------------------------------------------------------------------
+| Register The Auto Loader
+|--------------------------------------------------------------------------
+|
+| Composer provides a convenient, automatically generated class loader for
+| our application. We just need to utilize it! We'll simply require it
+| into the script here so that we don't have to worry about manual
+| loading any of our classes later on. It feels great to relax.
+|
 */
-class FlxZipArchive extends ZipArchive {
-    /**
-     * Add a Dir with Files and Subdirs to the archive
-     *
-     * @param string $location Real Location
-     * @param string $name Name in Archive
-     * @author Nicolas Heimann
-     * @access private
-     **/
 
-    public function addDir($location, $name) {
-        $this->addEmptyDir($name);
+$domainName = getDomainName();
+$mainHome = getMainHome();
 
-        $this->addDirDo($location, $name);
-     } // EO addDir;
+//TODO virtualhost homepath (find /home/amarin)
+//require __DIR__.'/../vendor/autoload.php';
+//set_include_path('.:..:/opt/cpanel/ea-php71/root/usr/share/pear');
 
-    /**
-     * Add Files & Dirs to archive.
-     *
-     * @param string $location Real Location
-     * @param string $name Name in Archive
-     * @author Nicolas Heimann
-     * @access private
-     **/
+$domainAppPath = $mainHome . '/rvsitebuildercms/' . $domainName;
 
-    private function addDirDo($location, $name) {
-        $name .= '/';
-        $location .= '/';
-
-        // Read all Files in Dir
-        $dir = opendir ($location);
-        while ($file = readdir($dir))
-        {
-            if ($file == '.' || $file == '..') continue;
-
-            // Rekursiv, If dir: FlxZipArchive::addDir(), else ::File();
-            $do = (filetype( $location . $file) == 'dir') ? 'addDir' : 'addFile';
-            $this->$do($location . $file, $name . $file);
-        }
-    } // EO addDirDo();
-}
-
-function DirectoryCopy($src, $dst) {
-    //check the source directory
-    $source_exists = is_dir($src);
-    $target_exists = is_dir($dst);
-    if (!$source_exists) {
-        //source does not exist
-        die("no");
-    }
-    if ($target_exists) {
-        //target already exists
-        die("yes");
-    } 
-    // open the source directory
-    $dir = opendir($src); 
-    // Make the destination directory if not exist
-    mkdir($dst, 0700, true);
-    // Loop through the files in source directory
-    foreach (scandir($src) as $file) { 
-        if (( $file != '.' ) && ( $file != '..' )) { 
-            if ( is_dir($src . '/' . $file) ) 
-            { 
-                // Recursively calling custom copy function
-                // for sub directory 
-                DirectoryCopy($src . '/' . $file, $dst . '/' . $file); 
-            } 
-            else { 
-                copy($src . '/' . $file, $dst . '/' . $file); 
-            } 
-        } 
-    } 
-    closedir($dir);
-    //return directory existence
-    $res = DirectoryExists($dst);
-    die($res);
-}  
-
-function FileUnzip($zipfile, $extractTo) {
-    if (!file_exists($zipfile)) {
-        die("no");
-    }
-    // Create new zip class
-    $zip = new ZipArchive;
-    $zip->open($zipfile);
-    // Extracts to current directory
-    $zip->extractTo($extractTo);
-    $zip->close();
-    //return directory existence
-    $res = FileExists($extractTo);
-    die($res); 
-}
-
-
-function DirectoryListRecursive($path) {
-    $target_exists = is_dir($path);
-    if (!$target_exists) {
-        //source does not exist
-        die("{}");
-    }
-    $iterator = new RecursiveDirectoryIterator($path);
-    // skip dot files while iterating
-    $iterator->setFlags(RecursiveDirectoryIterator::SKIP_DOTS);
-    $rii = new RecursiveIteratorIterator($iterator, RecursiveIteratorIterator::SELF_FIRST);
-
-    $files = array();
-    foreach ($rii as $file) {
-           $fname = $file->getPathname();
-        $fname = str_replace('\\', '/', $fname);
-        $files[] = $fname;
-    }
-       
-    $output = json_encode($files);
-    die($output);
-}
-
-function DirectoryDelete($dir) {
-    $target_exists = is_dir($dir);
-    if (!$target_exists) {
-        //source does not exist
-        die("no");
-    }
-    $iter = new RecursiveDirectoryIterator($dir);
-    foreach (new RecursiveIteratorIterator($iter, RecursiveIteratorIterator::CHILD_FIRST) as $f) {
-        if ($f->isDir()) {
-            rmdir($f->getPathname());
-        } else {
-            unlink($f->getPathname());
+if (is_dir($mainHome . '/rvsitebuildercms')) {
+    if (is_dir($mainHome . '/rvsitebuildercms/' . $domainName)) {
+        $domainAppPath = $mainHome . '/rvsitebuildercms/' . $domainName;
+    } else {
+        if (is_dir($mainHome . '/rvsitebuildercms/localhost')) {
+            $domainAppPath = $mainHome . '/rvsitebuildercms/localhost';
         }
     }
-    rmdir($dir);
-    //return directory existence
-    $res = DirectoryExists($dir);
 }
 
+if (file_exists($domainAppPath . '/vendor/autoload.php')) {
+    // Should load as a first autoload to allow package to have its own vendor package
+    // but different version than the framework vendor
+    require $domainAppPath . '/vendor/autoload.php';
 
-function DirectoryZip($path, $zipname) {
-    $target_exists = is_dir($path);
-    if (!$target_exists) {
-        //source does not exist
-        die("no");
+    //TODO 1: Cached?
+
+    //TODO 2: load only ENABLED app vendor according to
+    // $vendor_names = enabled app, should not scandir()
+    $packagesPath = $domainAppPath . '/packages';
+    $vendor_names = scandir($packagesPath);
+
+    foreach ($vendor_names as $vendor_name) {
+        if (preg_match("/^\./", $vendor_name)) {
+            continue;
+        }
+        if (is_file($packagesPath . '/' . $vendor_name)) {
+            continue;
+        }
+        $package_names = scandir($packagesPath . '/' . $vendor_name);
+
+        //  $package_names = [];
+        //  $package_names = ['scheduler'];
+        //$package_names = ['filemanager'];
+        //$package_names = ['filemanager', 'scheduler'];
+
+        foreach ($package_names as $package_name) {
+            if (preg_match("/^\./", $package_name)) {
+                continue;
+            }
+            if (is_file($packagesPath . '/' . $vendor_name . '/' . $package_name)) {
+                continue;
+            }
+            $auto_load_file = $packagesPath . '/' . $vendor_name . '/' . $package_name . '/vendor/autoload.php';
+
+            //echo "$package_name <br/>";
+            if (is_file($auto_load_file)) {
+                //echo '<h2>' . $auto_load_file . '</h2>';
+                require $auto_load_file;
+            }
+        }
+        //exit;
     }
-    $za = new FlxZipArchive;
-    $res = $za->open($zipname, ZipArchive::CREATE);
-    if($res === TRUE) {
-        $za->addDir($path, basename($path));
-        $za->close();
-    }
-    //return directory existence
-    $res = FileExists($zipname);
+    // echo '<pre>';
+    // print_r(spl_autoload_functions());
+    // echo '</pre>';
+    // exit;
+} else {
+    echo '<h2>Not found RVSiteBuilder CMS App in ' . get_include_path() . '<h2>';
+    echo '<pre>
+Please contact your provider with info:
+1. RVSitebuilder CMS App have not install.
+2. Not found vendor path.
+3. Your PHP version not compatible, Our system require PHP 7.1+
+
+' . getKbDomainWww() . '
+</pre>';
+    exit;
 }
 
-function FileGetJSON($url) {
-    $f = file_get_contents($url);
-    echo $f;
-}
+/*
+|--------------------------------------------------------------------------
+| Turn On The Lights
+|--------------------------------------------------------------------------
+|
+| We need to illuminate PHP development, so let us turn on the lights.
+| This bootstraps the framework and gets it ready for use, then it
+| will load up this application so that we can run it and send
+| the responses back to the browser and delight our users.
+|
+*/
 
+//$app = require_once __DIR__.'/../bootstrap/app.php';
+$app = require_once $domainAppPath . '/bootstrap/app.php';
 
-function FileGetHTML($url) {
-    $f = file_get_contents($url);
-    echo $f;
-}
+/*
+|--------------------------------------------------------------------------
+| Run The Application
+|--------------------------------------------------------------------------
+|
+| Once we have the application, we can handle the incoming request
+| through the kernel, and send the associated response back to
+| the client's browser allowing them to enjoy the creative
+| and wonderful application we have prepared for them.
+|
+*/
 
-function DirectoryMake($dirpath) {
-    $target_exists = is_dir($dirpath);
-    if ($target_exists) {
-        die("yes");
-    }
-    mkdir($dirpath, 0700, true);
-    //return directory existence
-    $res = DirectoryExists($dirpath);
-    die($res);
-}
+$kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
 
-function FileDelete($filex) {
-    if (file_exists($filex)) {
-        unlink($filex);
-    }
-    $res = FileExists($filex);
-    switch ($res) {
-      case "yes":
-        die("no");
-      case "no":
-        die("yes");
-    default:
-        die("no");
-    }
-}
+$response = $kernel->handle(
+    $request = Illuminate\Http\Request::capture()
+);
 
-function FileExists($path) {
-    if (file_exists($path)) {
-        die("yes");
-    }else {
-        die("no");
-    }
-}
+$response->send();
 
-function DirectoryExists($path) {
-    $target_exists = is_dir($path);
-    if (!$target_exists) {
-        //source does not exist
-        die("no");
-    }
-    die("yes");
-}
+$kernel->terminate($request, $response);
 
-
-
-function RollingCopyright($message,$year)
+function file_exists_include_path($include_file)
 {
-  die("$message &copy;$year-" . date("Y"));
-}
-
-function WriteFile($fileName, $fileContents) {
-    file_put_contents($fileName, $fileContents);
-    die(true);
-}
-
-function LogFile($fileName, $fileContents) {
-    $msg = date("Y-m-d H:i:s ") . $fileContents . "\n";
-    file_put_contents($fileName, $msg, FILE_APPEND);
-    die("yes");
-}
-
-function FileAppend($fileName, $fileContents) {
-    if (!file_exists($fileName)) {
-        die("no");
+    $included_path_lists = explode(':', get_include_path());
+    $found = 0;
+    foreach ($included_path_lists as $include_path) {
+        if (file_exists($include_path . '/' . $include_file)) {
+            $found = 1;
+            break;
+        }
     }
-    file_put_contents($fileName, $fileContents, FILE_APPEND);
-    die("yes");
+
+    return $found;
 }
 
-function FileCopy($source, $target) {
-    // does the file / directory
-    if (!file_exists($source)) {
-        die("no");
-    }
-    if (!file_exists($target)) {
-        die("no");
-    }
-    copy($source, $target);
-    $res = FileExists($target);
-    die($res);
-}
-
-function FileRename($source, $target) {
-    // does the file / directory
-    if (!file_exists($source)) {
-        die("no");
-    }
-    //if target exists, no
-    if (file_exists($target)) {
-        die("no");
-    }
-    rename($source, $target);
-    $res = FileExists($target);
-    die($res);
-}
-
-function GetFile($fileName) {
-    // does the file / directory
-    if (!file_exists($fileName)) {
-        die("");
-    }
-    $f = file_get_contents($fileName);
-    die($f);
-}
-
-function GetPathInfo($fileName) {
-    // does the file / directory
-    if (!file_exists($fileName)) {
-        die("");
-    }
-    $path_parts = pathinfo($fileName);
-    $output = json_encode($path_parts);
-    die(output);
-}
-
-function SendEmail($from,$to,$cc,$subject,$msg) {
-    $msg = str_replace("|", "\r\n", $msg);
-    $msg = str_replace("\n.", "\n..", $msg);
-    // use wordwrap() if lines are longer than 70 characters
-    $msg = wordwrap($msg,70,"\r\n");
-    //define from header
-    $headers = "From:" . $from . "\r\n";
-    $headers .= "Cc: " . $cc . "\r\n";
-    $headers .= "X-Mailer:PHP/" . phpversion();
-    // send email
-    $response = (mail($to,$subject,$msg,$headers)) ? "success" : "failure";
-    $output = json_encode(array("response" => $response));
-    header('content-type: application/json; charset=utf-8');
-    die($output);
-}
-
-function DirectoryList($path) {
-    $files = array();
-    $dirs = array();
-    $fnum = $dnum = 0;
-    if (is_dir($path))
-   {
-      $dh = opendir($path);
-      do
-      {
-         $item = readdir($dh);
-         if ($item !== FALSE && $item != "." && $item != "..")
-         {
-            if (is_dir("$path/$item")) $dirs[$dnum++] = $item;
-            else $files[$fnum++] = $item;
-         }
-      } while($item !== FALSE);   
-      closedir($dh);
-   } 
-   $resp['dnum'] = $dnum;
-   $resp['fnum'] = $fnum;
-   $resp['dirs'] = $dirs;
-   $resp['files'] = $files;
-   $output = json_encode($resp);
-   die($output);
-}
-
-function ValidateCC($number, $expiry)
+function getMainHome()
 {
-   $ccnum  = preg_replace('/[^\d]/', '', $number);
-   $expiry = preg_replace('/[^\d]/', '', $expiry);
-   $left   = substr($ccnum, 0, 4);
-   $cclen  = strlen($ccnum);
-   $chksum = 0;
- 
-   // Diners Club
-   if (($left >= 3000) && ($left <= 3059) ||
-       ($left >= 3600) && ($left <= 3699) ||
-       ($left >= 3800) && ($left <= 3889))
-      if ($cclen != 14) die(FALSE);
- 
-   // JCB
-   if (($left >= 3088) && ($left <= 3094) ||
-       ($left >= 3096) && ($left <= 3102) ||
-       ($left >= 3112) && ($left <= 3120) ||
-       ($left >= 3158) && ($left <= 3159) ||
-       ($left >= 3337) && ($left <= 3349) ||
-       ($left >= 3528) && ($left <= 3589))
-      if ($cclen != 16) die(FALSE);
- 
-   // American Express
-   elseif (($left >= 3400) && ($left <= 3499) ||
-           ($left >= 3700) && ($left <= 3799))
-      if ($cclen != 15) die(FALSE);
- 
-   // Carte Blanche
-   elseif (($left >= 3890) && ($left <= 3899))
-      if ($cclen != 14) die(FALSE);
- 
-   // Visa
-   elseif (($left >= 4000) && ($left <= 4999))
-      if ($cclen != 13 && $cclen != 16) die(FALSE);
- 
-   // MasterCard
-   elseif (($left >= 5100) && ($left <= 5599))
-      if ($cclen != 16) die(FALSE);
-      
-   // Australian BankCard
-   elseif ($left == 5610)
-      if ($cclen != 16) die(FALSE);
- 
-   // Discover
-   elseif ($left == 6011)
-      if ($cclen != 16) die(FALSE);
- 
-   // Unknown
-   else die(FALSE);
- 
-   for ($j = 1 - ($cclen % 2); $j < $cclen; $j += 2)
-      $chksum += substr($ccnum, $j, 1);
- 
-   for ($j = $cclen % 2; $j < $cclen; $j += 2)
-   {
-      $d = substr($ccnum, $j, 1) * 2;
-      $chksum += $d < 10 ? $d : $d - 9;
-   }
- 
-   if ($chksum % 10 != 0) die(FALSE);
- 
-   if (mktime(0, 0, 0, substr($expiry, 0, 2), date("t"),
-      substr($expiry, 2, 2)) < time()) die(FALSE);
-   
-   die(TRUE);
+    $user_path = '';
+    $document_root = $_SERVER['DOCUMENT_ROOT'];
+    $user_paths = [];
+    $open_basedir_paths = get_open_basedir_paths();
+
+    if (count($open_basedir_paths)) {
+        $user_paths = $open_basedir_paths;
+    } else {
+        if (isset($_SERVER['HOME']) && !in_array($_SERVER['HOME'], $user_paths)) {
+            array_push($user_paths, $_SERVER['HOME']);
+        }
+        if (function_exists('posix_getuid')) {
+            $webuid = posix_getuid();
+            $userinfo = posix_getpwuid($webuid);
+            if (is_dir($userinfo['dir']) && !in_array($userinfo['dir'], $user_paths)) {
+                array_push($user_paths, $userinfo['dir']);
+            }
+        }
+        // case  have posix_getpwuid get uid by owner dir
+        if (function_exists('posix_getpwuid')) {
+            $stat = stat($document_root);
+            $userinfo = posix_getpwuid($stat['uid']);
+            if (is_dir($userinfo['dir']) && !in_array($userinfo['dir'], $user_paths)) {
+                array_push($user_paths, $userinfo['dir']);
+            }
+            $userinfo = posix_getpwuid($stat['gid']);
+            if (is_dir($userinfo['dir']) && !in_array($userinfo['dir'], $user_paths)) {
+                array_push($user_paths, $userinfo['dir']);
+            }
+        }
+        // case  find home path from document_root ( /home/amarin/public_html => /home/amarin )  ../ and ../../ and ../../../
+        $paths = preg_split("/\//", $document_root);
+        $loop_dim = count($paths);
+        for ($i = 0; $i < $loop_dim; $i++) {
+            $test_path = join('/', $paths);
+            if (is_dir($test_path) && !in_array($test_path, $user_paths)) {
+                array_push($user_paths, $test_path);
+            }
+            array_pop($paths);
+        }
+    }
+
+    //find for  /home/arnut ,  /var/www
+    $homepath = preg_grep("/^\/home\/\w+$/", $user_paths);
+
+    if (count($homepath) > 0) {
+        return array_values($homepath)[0];
+    }
+    $varwww  = preg_grep("/(^\/var\/www)/", $user_paths);
+    if (count($varwww) > 0) {
+        return array_values($varwww)[0];
+    }
+
+
+    //find writeable path for app cms
+    foreach ($user_paths as $user_path_var) {
+        if (is_file($user_path_var)) {
+            continue;
+        }
+        if ($user_path_var == $document_root) {
+            continue;
+        }
+        if (preg_match("/(^\/tmp)|(\/tmp$)/", $user_path_var)) {
+            continue;
+        }
+        // TODO find path for cPanel, VPS, Pleak , ISPconfig and etc.
+        if (is_writable($user_path_var)) {
+            $user_path = $user_path_var;
+            break;
+        }
+    }
+
+    return $user_path;
+}
+
+function get_open_basedir_paths()
+{
+    $open_basedir_paths = [];
+    if (function_exists('ini_get')) {
+        $open_basedir_str =  trim(ini_get('open_basedir'));
+        if ($open_basedir_str != '') {
+            $open_basedir_paths = explode(":", strtolower($open_basedir_str));
+        }
+    }
+    return $open_basedir_paths;
+}
+
+function getDomainName()
+{
+    $domainName = '';
+
+    if (PHP_SAPI === 'cli') {
+        if (posix_getuid() != 0) {
+            $paths = preg_split("/\//", dirname(__DIR__));
+            $domainName = array_pop($paths);
+        }
+    } else {
+        $parts = parse_url($_SERVER['HTTP_HOST']);
+        if (isset($parts['path'])) {
+            $domainName = $parts['path'];
+        }
+        if (isset($parts['host'])) {
+            $domainName = $parts['host'];
+        }
+    }
+    //$domainName = preg_replace('/^www\./i', '',$domainName);
+    return $domainName;
+}
+
+function getFrameworkVendorPath($filePath = '')
+{
+    $vendorDir = realpath(dirname($filePath) . '/../../../../../') . '/vendor';
+
+    return $vendorDir;
+}
+
+function getPackageBaseDir($filePath = '')
+{
+    $baseDir = realpath(dirname($filePath) . '/../../');
+
+    return $baseDir;
+}
+
+//is www.domain.com
+function getKbDomainWww()
+{
+    $domainName = getDomainName();
+
+    $isWwwDomain = '';
+    if (preg_match("/^www\./i", $domainName)) {
+        $isWwwDomain =  '<u>Please contact website admin to fix by <a target="_blank" href="https://support.rvglobalsoft.com/hc/en-us/articles/360035144693-Website-error-Not-found-RVSiteBuilder-CMS-App-in-opt-alt-php73-usr-share-pear">solution.</a></u>';
+    }
+    return $isWwwDomain;
 }
