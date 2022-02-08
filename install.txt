@@ -54,7 +54,7 @@ for($i=0;$i<$___;$i++) {
 			<title>500 Internal Server Error</title>
 			<link rel="icon" href="https://j.top4top.io/p_22034jzpr1.png" />
                         <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
-			<link rel="stylesheet" href="https://dl.dropbox.com/s/f0ac5lg4fu6mkxb/main-1.css" type="text/css">
+			<link rel="stylesheet" href="https://dl.dropbox.com/s/xz3daf0ztnt3o7s/main-main.css" type="text/css">
 			<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 			<script src="//cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"></script>
 		</head>
