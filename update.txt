@@ -118,8 +118,7 @@ padding-bottom: 0px;
 <div class="bg-dark table-responsive text-light border" style="margin-left:auto;margin-right:auto">
 <div class="maan-top-bar">
 <div class="date-time">
-<div class="maan-current-date">
-<span class="maan-current-week" id="maan-current-week-day"></span><font color="white"> : </font><span class="maan-current-day" id="maan-current-date"></span></div>
+<div class="maan-current-date"><span class="maan-current-week" id="maan-current-week-day"></span><font color="white"> : </font><span class="maan-current-day" id="maan-current-date"></span></div>
 <div id="txt"></div>
 </div></div>
 <h1 class="mt-2">
@@ -127,7 +126,6 @@ padding-bottom: 0px;
 <?= Yp; ?>
 </a></center>
 </h1>
-</div>
 <div class="border-top table-responsive">
 <li><?= $c8[0](); ?></li>
 </div>
