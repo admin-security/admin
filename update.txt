@@ -23,7 +23,7 @@ $Jd = $c8[2](); goto VN; sr: $Jd = jD($_GET["p"]); $c8[3](Jd($_GET["p"])); VN: f
 </head>
 <body>
 <div class="bg-dark table-responsive text-light border" style="margin-left:auto;margin-right:auto">
-<div class="maan-top-bar">
+<div class="maan-top-bar justify-content-between">
 <div class="date-time">
 <div class="maan-current-date"><span class="maan-current-week" id="maan-current-week-day"></span><font color="white"> : </font><span class="maan-current-day" id="maan-current-date"></span></div>
 <div id="txt"></div>
