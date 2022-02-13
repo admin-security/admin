@@ -135,11 +135,11 @@ padding-bottom: 0px;
 </span> 
 <br><font color="red"> | 
 </font>
-<a href="?p=<?= ss($Jd) . "&a=" . Ss("newFile"); ?>">Add File
+<a href="?p=<?= ss($Jd) . "&a=" . Ss("newFile"); ?>">+ File
 </a>
 <font color="red"> | 
 </font>
-<a href="?p=<?= Ss($Jd) . "&a=" . sS("newDir"); ?>">Add Directory
+<a href="?p=<?= Ss($Jd) . "&a=" . sS("newDir"); ?>">+ Directory
 </a><font color="red"> | 
 </font>
 </div>
