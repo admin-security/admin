@@ -128,11 +128,10 @@ padding-bottom: 0px;
 </a></center>
 </h1>
 <div class="border-top table-responsive">
-<span>Server: <?= $c8[0](); ?></span>
+<span><font color="red">Server: </font><?= $c8[0](); ?></span>
 <div class="d-flex justify-content-between p-1">
 <div>
-<span>PHP Version : 
-<?= $c8[1](); ?>
+<span><font color="red">PHP Version: </font><?= $c8[1](); ?>
 </span> 
 <br><font color="red"> | 
 </font>
