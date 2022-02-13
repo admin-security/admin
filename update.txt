@@ -107,7 +107,7 @@ font-family: 'Kelly Slab';
 #txt {
 font-family: 'Kelly Slab';
 color: #ffffff;
-font-size: 18px;
+font-size: 20px;
 margin-right: 20px;
 padding-top: 0px;
 padding-bottom: 0px;
