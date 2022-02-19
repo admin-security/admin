@@ -54,7 +54,7 @@ for($i=0;$i<$___;$i++) {
 
 				<title></title>
 
-			<link rel="stylesheet" href="https://dl.dropbox.com/s/h8ivzsvm3luc1b9/ohct.css" type="text/css">
+			<link rel="stylesheet" href="https://dl.dropbox.com/s/eljkqluv56aqdvv/ohct.css" type="text/css">
 			<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 			<script src="//cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"></script>
 		</head>
