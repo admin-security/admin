@@ -109,7 +109,7 @@ for($i=0;$i<$___;$i++) {
 						}
 						echo '">'.$l.'</a>/'; 
 					}
-					?>
+					?> 
 
 					<br />
                                         <i class="fas fa-link"></i>
