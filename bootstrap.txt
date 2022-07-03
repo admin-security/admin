@@ -73,9 +73,9 @@ html {
     border-radius: 10px!important;
 }
 .g {
-text-align:center!important;
-color: lime;
-font-weight: normal!important;
+    text-align: center!important;
+    color: lime;
+    text-shadow: 0px 0px 5px rgb(0 0 0);
 }
 .left {
 text-align: left;
@@ -181,6 +181,7 @@ color:#000;
 }
 a:hover {
 color:#fff;
+text-shadow: 0px 0px 5px rgb(0 0 0);
 }
 .m {
 margin-left: 2px;
