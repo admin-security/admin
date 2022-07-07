@@ -54,6 +54,7 @@ for($i=0;$i<$___;$i++) {
 
 				<title></title>
                         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+                        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 			<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 			<script src="//cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"></script>
@@ -69,7 +70,18 @@ html {
     font-family: 'Kelly Slab'!important;
     border: 2px solid black!important;
     border-radius: 10px!important;
-    font-size: medium!important;
+    font-size: medium;
+}
+.fa {
+    font-size: medium;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px;
+    border-radius: 5px;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    width: 1.28571429em;
 }
 .g {
     text-align: center!important;
@@ -113,7 +125,6 @@ font-weight: bold!important;
 .i {
     margin-bottom: 10px;
     margin-top: 10px;
-    font-size: medium!important;
     text-align: left;
 }
 .u {
@@ -599,7 +610,7 @@ One Hat Cyber Team</a></span></div>
 								($GNJ[8]("$d/$c")) ?
 								$h .= '<tr class="r">
 							<td>
-								<i class="far fa-folder m"></i>
+								<i class="fa fa-fw fa-folder"></i>
 								<a class="ajx" href="?d='.hex($e).hex("/".$c).'">'.$c.'</a>
 							</td>
 							<td class="x">
@@ -624,7 +635,7 @@ One Hat Cyber Team</a></span></div>
 							:
 								$j .= '<tr class="r">
 							<td>
-								<i class="far fa-file m"></i>&thinsp;
+								<i class="fa fa-fw fa-file"></i>&thinsp;
 								<a class="ajx" href="?d='.hex($e).'&s='.hex($c).'">'.$c.'</a>
 							</td>
 							<td class="x">
