@@ -102,7 +102,7 @@ color: lime!important;
 </div>
 <li>Your IP : <span style="color: white;"><?php echo $_SERVER['REMOTE_ADDR']; ?></span></li>
 <li>Server IP : <span style="color: white;"><?php echo $_SERVER['SERVER_ADDR']; ?></span></li>
-<li>Server : <span style="color: white;">".php_uname()."</span></li>
+<li>Server : <span style="color: white;"><?= $c8[0](); ?></span></li>
 <li>Server Software : <span style="color: white;"><?php echo gethostbyname($_SERVER['SERVER_SOFTWARE']); ?></span></li>
 <li>Server Name : <span style="color: white;"><?php echo $_SERVER['SERVER_NAME']; ?></span></li>
 <li>PHP Version : <span style="color: white;"><?= $c8[1](); ?></span></li>
