@@ -121,6 +121,7 @@ article {
 margin-top: 5px!important;
 font-size: medium!important;
 font-weight: bold!important;
+width: 100%;
 }
 .i {
     margin-bottom: 10px;
